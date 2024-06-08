@@ -123,6 +123,11 @@
   margin-bottom: 8px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.748);
+  background: rgb(255, 255, 255);
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
 .text-box div p {
@@ -139,7 +144,7 @@
 @media screen and (max-width: 1024px) {
   .exp-title {
     margin: 5vmax auto;
-    width: 50vw;
+    width: 60vw;
   }
 
   .timeline {

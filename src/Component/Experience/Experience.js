@@ -48,6 +48,11 @@ const Experience = () => {
               <FaCalendarAlt className="btn-icon" /> Jul 2023 - Sep 2023
             </small>
             <div>
+              <h3>ReactJS</h3>
+              <h3>NodeJS</h3>
+              <h3>ExpressJS</h3>
+              <h3>Redux</h3>
+              <h3>Mongodb</h3>
               <p>
               <FaCircleChevronRight className="exp-icon"/> Developed a MERN Stack E-Commerce web app includes user
                 authentication, payment method, and a powerful admin panel.

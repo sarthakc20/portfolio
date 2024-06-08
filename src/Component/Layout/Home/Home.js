@@ -21,7 +21,7 @@ const Home = () => {
       </div>
       <div className="section__text">
         <p className="section__text__p1">
-          I am Sarthak, a 23 years old Software Engineer. Currently, I am
+          I am a 23 years old Software Engineer. Currently, I am
           working at <span>Tech Mahindra</span> as an Associate Software
           Engineer. My expertise is in Full Stack Development. As a MERN stack
           developer with a strong passion for creating dynamic and efficient web
