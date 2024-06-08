@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+.exp {
+  padding-top: 2vmax;
+}
+
+.exp-title {
+  margin: 2vmax auto;
+  width: 18vw;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.container {
+  padding: 20px 60px;
+  position: relative;
+  width: 50%;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.container:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.container:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.text-box {
+  padding: 20px 30px;
+  position: relative;
+  background-color: rgb(248, 250, 253);
+  border-radius: 15px;
+  font-size: 15px;
+}
+
+.left-container {
+  left: 0;
+}
+
+.right-container {
+  left: 50%;
+}
+
+.container img {
+  position: absolute;
+  width: 50px;
+  border: 2px solid rgb(205, 222, 247);
+  border-radius: 5px;
+  right: -20px;
+  top: 23px;
+  z-index: 10;
+}
+
+.right-container img {
+  left: -20px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: rgb(205, 222, 247);
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  animation: moveline 2s linear forwards;
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.text-box h2 {
+  font-weight: 600;
+  color: rgb(6, 46, 111);
+}
+
+.text-box small {
+  display: inline-block;
+  margin-bottom: 15px;
+  margin-top: 8px;
+  color: rgba(0, 0, 0, 0.658);
+  font-size: 0.89rem;
+}
+
+.designation {
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgb(94, 153, 249);
+}
+
+.text-box div {
+  margin-bottom: 12px;
+}
+
+.text-box div h3 {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.748);
+}
+
+.text-box div p {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.768);
+}
+
+.exp-icon {
+  font-size: 0.9rem;
+  vertical-align: middle;
+  color: rgb(94, 153, 249);
+}
+
+@media screen and (max-width: 1024px) {
+  .exp-title {
+    margin: 5vmax auto;
+    width: 50vw;
+  }
+
+  .timeline {
+    margin: 50px auto;
+  }
+
+  .timeline::after {
+    left: 32px;
+    width: 1px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 18px;
+  }
+
+  .right-container {
+    left: 0;
+  }
+
+  .container img {
+    width: 40px;
+  }
+
+  .left-container img,
+  .right-container img {
+    left: 10px;
+  }
+}
+  
