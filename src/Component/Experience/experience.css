@@ -146,9 +146,13 @@
     margin: 50px auto;
   }
 
+  .container img {
+    border: 1.5px solid rgb(205, 222, 247);
+  }
+
   .timeline::after {
     left: 32px;
-    width: 2px;
+    width: 1.5px;
   }
 
   .container {
