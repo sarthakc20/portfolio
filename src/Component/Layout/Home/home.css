@@ -158,6 +158,10 @@ section {
   vertical-align: bottom;
 }
 
+.socials-container a i {
+    color: rgb(6, 46, 111);
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 1400px) {
