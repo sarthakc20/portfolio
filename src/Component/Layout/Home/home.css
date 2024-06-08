@@ -98,10 +98,7 @@ section {
 .icon {
   cursor: pointer;
   font-size: 2rem;
-}
-
-.icon-hover:hover {
-  font-size: 1.9rem;
+  display: inline-block;
 }
 
 /* BUTTONS */
@@ -158,8 +155,12 @@ section {
   vertical-align: bottom;
 }
 
-.socials-container a i {
+.icon-color {
     color: rgb(6, 46, 111);
+}
+
+.icon-color:hover {
+    color: rgba(6, 46, 111, 0.74);
 }
 
 /* Media Queries */

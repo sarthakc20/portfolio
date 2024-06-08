@@ -148,7 +148,7 @@
 
   .timeline::after {
     left: 32px;
-    width: 1px;
+    width: 2px;
   }
 
   .container {

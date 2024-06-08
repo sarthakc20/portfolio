@@ -44,14 +44,14 @@ const Home = () => {
             target="_blank"
             className="icon icon-hover fade-in"
           >
-            <FaLinkedin />
+            <FaLinkedin className="icon-color"/>
           </a>
           <a
             href="https://github.com/sarthakc20"
             target="_blank"
             className="icon icon-hover fade-in"
           >
-            <FaGithub />
+            <FaGithub className="icon-color"/>
           </a>
         </div>
       </div>
