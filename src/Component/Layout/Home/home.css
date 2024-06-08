@@ -219,6 +219,10 @@ section {
     height: 50vw;
     justify-content: center;
   }
+  .section__text__p1 {
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.741)
+  }
   .section__text__p2 {
     font-size: 1.25rem;
   }
