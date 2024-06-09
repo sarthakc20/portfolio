@@ -48,6 +48,8 @@
   padding: 20px 30px;
   position: relative;
   background-color: rgb(248, 250, 253);
+  border: 1px solid rgb(205, 222, 247);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
   border-radius: 15px;
   font-size: 15px;
 }
