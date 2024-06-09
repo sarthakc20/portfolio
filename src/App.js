@@ -3,9 +3,11 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import WebFont from "webfontloader";
 import Header from "./Component/Layout/Header/Header.js";
-import Home from "./Component/Layout/Home/Home.js";
+import Home from "./Component/Home/Home.js";
 import NotFound from "./Component/Layout/Not Found/NotFound.js";
 import Experience from "./Component/Experience/Experience.js";
+import Projects from "./Component/Projects/Projects.js";
+import Blogs from "./Component/Blogs/Blogs.js";
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/experience" element={<Experience />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

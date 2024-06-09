@@ -1,6 +1,6 @@
 section {
   padding-top: 7vh;
-  height: 96vh;
+  /* height: 1000vh; */
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -15,6 +15,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  margin-bottom: 2.5vmax;
 }
 
 .section__pic-container {
@@ -156,21 +157,28 @@ section {
 }
 
 .icon-color {
-    color: rgb(6, 46, 111);
+  color: rgb(6, 46, 111);
 }
 
 .icon-color:hover {
-    color: rgba(6, 46, 111, 0.74);
+  color: rgba(6, 46, 111, 0.74);
 }
+
+#skills {
+  text-align: center;
+  /* padding: 2rem; */
+}
+
+
 
 /* Media Queries */
 
 @media screen and (max-width: 1400px) {
   section {
-    padding-top: 8vh;
+    padding-top: 9vh;
   }
   #profile {
-    height: 83vh;
+    height: 65vh;
     margin-bottom: 6rem;
   }
   .section__text {
@@ -179,8 +187,10 @@ section {
 }
 
 @media screen and (max-width: 1200px) {
-  section {
-    padding-top: 12vh;
+
+  #profile {
+    height: 70vh;
+    margin-bottom: 0vmax;
   }
   #profile,
   .section-container {
@@ -208,7 +218,7 @@ section {
     padding-top: 12vh;
   }
   #profile {
-    height: 83vh;
+    height: 90vh;
     margin-bottom: 0;
   }
   .btn-container {
@@ -221,7 +231,7 @@ section {
   }
   .section__text__p1 {
     text-align: left;
-    color: rgba(0, 0, 0, 0.741)
+    color: rgba(0, 0, 0, 0.741);
   }
   .section__text__p2 {
     font-size: 1.25rem;
