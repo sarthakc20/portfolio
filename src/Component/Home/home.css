@@ -174,11 +174,9 @@ section {
 /* Media Queries */
 
 @media screen and (max-width: 1400px) {
-  section {
-    padding-top: 12vh;
-  }
   #profile {
-    height: 65vh;
+    padding-top: 30vh;
+    height: 75vh;
     margin-bottom: 6rem;
   }
   .section__text {
