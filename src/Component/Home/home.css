@@ -182,6 +182,10 @@ section {
   .section__text {
     padding-top: 2vh;
   }
+
+  .section__pic-container {
+    margin: -6vh 0;
+  }
 }
 
 @media screen and (max-width: 1200px) {
