@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 import profilePic from "../../assets/profile-pic.jpeg";
 import resume from "../../assets/Sarthak-Chatterjee Resume.pdf";
 import { MdMail, MdOutlineFileDownload } from "react-icons/md";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import Skills from "./Skills/Skills.js";
 
 const Home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const openResume = () => {
     window.open(resume);
   };
 
-  const goToContact = () => {
-    document.location.href = "#contact";
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
   return (
@@ -36,7 +38,7 @@ const Home = () => {
             <button className="btn btn-color-2" onClick={openResume}>
               Download CV <MdOutlineFileDownload className="btn-icon" />
             </button>
-            <button className="btn btn-color-1" onClick={goToContact}>
+            <button className="btn btn-color-1" onClick={toggleModal}>
               Contact Info <MdMail className="btn-icon" />
             </button>
           </div>
@@ -62,6 +64,26 @@ const Home = () => {
       <section id="skills">
         <Skills />
       </section>
+
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={toggleModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <span className="modal-close" onClick={toggleModal}>&times;</span>
+            <h2>Contact Info</h2>
+            <div className="social-links">
+              <a href="https://www.linkedin.com/in/sarthak-chatterjee-/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin /> LinkedIn
+              </a>
+              <a href="https://github.com/sarthakc20" target="_blank" rel="noopener noreferrer">
+                <FaGithub /> GitHub
+              </a>
+              <a href="https://www.instagram.com/sarthak_chatterjee_/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram /> Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

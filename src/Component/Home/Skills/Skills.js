@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./skills.css";
 import htmlIcon from "../../../assets/html.png";
 import cssIcon from "../../../assets/css.svg";
@@ -27,12 +27,39 @@ const skills = [
 ];
 
 const Skills = () => {
+  const skillsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("appear");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const currentSkillsRef = skillsRef.current;
+    if (currentSkillsRef) {
+      observer.observe(currentSkillsRef);
+    }
+
+    return () => {
+      if (currentSkillsRef) {
+        observer.unobserve(currentSkillsRef);
+      }
+    };
+  }, []);
+
   return (
     <>
       <div className="exp-title">
         <h1 className="title name">Skills</h1>
       </div>
-      <div className="skills-grid">
+      <div className="skills-grid" ref={skillsRef}>
         {skills.map((skill, index) => (
           <div className="skill-card" key={index}>
             <img
