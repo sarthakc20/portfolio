@@ -1,0 +1,37 @@
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: rgb(6, 46, 111);
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: rgba(6, 46, 111, 0.74); 
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.853);
+}
+
+.humor-text {
+  margin-top: 1.2rem;
+  font-style: italic;
+  color: #555;
+}
