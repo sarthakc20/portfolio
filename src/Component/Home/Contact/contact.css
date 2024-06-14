@@ -24,10 +24,11 @@ h2 {
   margin-bottom: 2rem;
 }
 
-p {
+.contact-text {
   text-align: center;
-  font-size: 1.1rem;
-  color: rgba(0, 0, 0, 0.853);
+  font-size: 1.03rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.768);
 }
 
 .humor-text {

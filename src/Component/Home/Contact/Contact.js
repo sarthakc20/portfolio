@@ -1,15 +1,17 @@
 import React from "react";
 import "./contact.css";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <section id="contact">
       <div className="contact-container">
         <h2 className="title name">Contact Me</h2>
-        <p>
-          Feeling social? Let's connect! Whether you have a project in mind or just want to chat about the latest tech trends, I'm here for you. 
-          <br /><br />
+        <p className="contact-text">
+          Feeling social? Let's connect! Whether you have a project in mind or
+          just want to chat about the latest tech trends, I'm here for you.
+          <br />
+          <br />
           Drop me a message, and let's make something awesome together!
         </p>
         <div className="contact-socials">
@@ -21,22 +23,21 @@ const Contact = () => {
           >
             <FaLinkedin />
           </a>
+          <a href="mailto:sarthak@example.com" className="social-icon">
+            <FaEnvelope />
+          </a>
           <a
-            href="https://github.com/sarthakc20"
+            href="https://www.instagram.com/sarthak_chatterjee_/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon"
           >
-            <FaGithub />
-          </a>
-          <a
-            href="mailto:sarthak@example.com"
-            className="social-icon"
-          >
-            <FaEnvelope />
+            <FaInstagram />
           </a>
         </div>
-        <p className="humor-text">P.S. I'm also available for impromptu coffee meetups. Just saying!</p>
+        <p className="humor-text">
+          P.S. I'm also available for impromptu coffee meetups. Just saying!
+        </p>
       </div>
     </section>
   );
