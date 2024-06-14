@@ -3,6 +3,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import WebFont from "webfontloader";
 import Header from "./Component/Layout/Header/Header.js";
+import Footer from "./Component/Layout/Footer/Footer.js";
 import Home from "./Component/Home/Home.js";
 import NotFound from "./Component/Layout/Not Found/NotFound.js";
 import Experience from "./Component/Experience/Experience.js";
@@ -31,6 +32,8 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }
