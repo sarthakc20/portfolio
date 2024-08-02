@@ -127,9 +127,11 @@
   font-weight: 500;
   color: rgba(0, 0, 0, 0.748);
   background: rgb(255, 255, 255);
+  border: 0.2px solid rgb(205, 222, 247);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.042);
+  border-radius: 5px;
   display: inline-block;
   padding: 3px 6px;
-  border-radius: 5px;
   margin-right: 10px;
 }
 
