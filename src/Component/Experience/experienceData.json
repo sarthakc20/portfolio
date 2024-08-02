@@ -1,0 +1,29 @@
+[
+  {
+    "company": "Tech Mahindra",
+    "designation": "Associate Software Engineer",
+    "duration": "Mar 2024 - Present",
+    "technologies": ["HTML", "CSS", "JavaScript", "Liquid"],
+    "tasks": [
+      "Developed and rebranded the frontend of Shopify stores according to client specifications using HTML, CSS, and JavaScript.",
+      "Implemented custom features and functionalities using Shopify's Liquid templating language.",
+      "Managed version control and collaboration workflows using Git and GitHub, including branching strategies for efficient development and deployment."
+    ],
+    "image": "tm.webp"
+  },
+  {
+    "company": "iNeuron.ai",
+    "designation": "Full Stack Developer Intern",
+    "duration": "Jul 2023 - Sep 2023",
+    "technologies": ["ReactJS", "NodeJS", "ExpressJS", "Redux", "MongoDB"],
+    "tasks": [
+      "Developed a MERN Stack E-Commerce web app includes user authentication, payment method, and a powerful admin panel.",
+      "The frontend is developed using ReactJS which fetches data from MongoDB.",
+      "Implemented Redux for state management.",
+      "Secured the application with jwt authentication.",
+      "Created an Admin Panel to manage products, users, orders, and roles.",
+      "Incorporated Stripe payment gateway for secure and seamless payments."
+    ],
+    "image": "ineuron.jpg"
+  }
+]
