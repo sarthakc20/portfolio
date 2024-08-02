@@ -4,7 +4,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { FaCircleChevronRight } from "react-icons/fa6";
 import TM from "../../assets/tm.webp";
 import INEURON from "../../assets/ineuron.jpg";
-import "../Layout/loader.css";
+import Loader from "../Layout/Loader/Loader.js";
 
 // Mapping of image filenames to imported images
 const imageMap = {
@@ -30,11 +30,7 @@ const Experience = () => {
 
   return (
     <>
-      {loading && (
-        <div className="loader">
-          <div className="spinner"></div>
-        </div>
-      )}
+      {loading && <Loader />}
 
       <div className="exp">
         <div className="exp-title">
