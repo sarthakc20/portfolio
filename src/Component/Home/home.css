@@ -301,6 +301,7 @@ section {
   .section__text__p1 {
     text-align: left;
     color: rgba(0, 0, 0, 0.741);
+    font-weight: 100;
   }
   .section__text__p2 {
     font-size: 1.25rem;
