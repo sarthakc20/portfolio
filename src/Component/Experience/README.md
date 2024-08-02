@@ -30,7 +30,7 @@ Update State: The setExperienceData function is called with the JSON data, updat
 In ES6 modules, when you use the export default syntax, whatever you export becomes the default property of the import result. In the case of JSON files and dynamic imports, the content of the JSON file is treated as the default export of the module.
 
 If you were importing the JSON file statically, you wouldn't need to access the .default property:
-import experienceData from '../../data/experienceData.json';
+import experienceData from './experienceData.json';
 // experienceData contains the actual JSON data directly
 
 But with dynamic imports, the result is always an object representing the module, hence the need to access default.

@@ -9,7 +9,8 @@
       "Implemented custom features and functionalities using Shopify's Liquid templating language.",
       "Managed version control and collaboration workflows using Git and GitHub, including branching strategies for efficient development and deployment."
     ],
-    "image": "tm.webp"
+    "image": "tm.webp",
+    "alttext": "Tech Mahindra logo"
   },
   {
     "company": "iNeuron.ai",
@@ -24,6 +25,7 @@
       "Created an Admin Panel to manage products, users, orders, and roles.",
       "Incorporated Stripe payment gateway for secure and seamless payments."
     ],
-    "image": "ineuron.jpg"
+    "image": "ineuron.jpg",
+    "alttext": "iNeuron.ai logo"
   }
 ]

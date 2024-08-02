@@ -32,8 +32,8 @@ const Experience = () => {
             key={index}
             className={`container ${index % 2 === 0 ? "left-container" : "right-container"}`}
           >
-            <img src={imageMap[experience.image]} alt={experience.company} />
-            <div className="text-box">
+            <img src={imageMap[experience.image]} alt={experience.alttext} />
+            <div className="exp-text-box">
               <h2>{experience.company}</h2>
               <p className="designation">{experience.designation}</p>
               <small>

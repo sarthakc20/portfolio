@@ -11,6 +11,7 @@ import mongodbIcon from "../../../assets/mongodb.svg";
 import sqlIcon from "../../../assets/sql.png";
 import javaIcon from "../../../assets/java.png";
 import cppIcon from "../../../assets/cpp.png";
+import shopify from "../../../assets/shopify.webp";
 
 const skills = [
   { name: "HTML", icon: htmlIcon },
@@ -24,6 +25,7 @@ const skills = [
   { name: "SQL", icon: sqlIcon },
   { name: "Java", icon: javaIcon },
   { name: "C++", icon: cppIcon },
+  { name: "Shopify", icon: shopify },
 ];
 
 const Skills = () => {
