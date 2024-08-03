@@ -1,0 +1,127 @@
+/* Base Styles */
+
+.project {
+  padding-top: 2vmax;
+}
+
+.section_project-grid {
+  padding: 10px 80px;
+}
+
+.project_grid {
+  display: grid;
+  grid-column-gap: 40px;
+  grid-row-gap: 80px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+}
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 32rem;
+}
+
+.project_card_image {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.project_card-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease-in-out, opacity 0.5s ease-in-out;
+  will-change: transform, opacity;
+}
+
+.project_card_image:hover .project_card-cover {
+  transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.project_card-content {
+  z-index: 101;
+  color: #fff;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0;
+  padding-bottom: 50px;
+  display: flex;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project_card_image:hover .project_card-content {
+  opacity: 1;
+}
+
+.text-size-medium {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.text-size-small {
+  font-size: 16px;
+  line-height: 140%;
+}
+
+/* Mobile View Styles */
+
+@media (max-width: 767px) {
+  .section_project-grid {
+    padding: 10px 20px;
+  }
+
+  .project_grid {
+    grid-template-columns: 1fr; /* Only one item per row */
+    grid-row-gap: 20px;
+    grid-column-gap: 0; 
+  }
+
+  .project_card_image:hover .project_card-cover {
+    /* Remove hover effect for mobile */
+    opacity: 1;
+    transform: none;
+  }
+
+  .project_card-content {
+    opacity: 1; /* Ensure content is visible */
+  }
+}
+
+/* Tablet View Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section_project-grid {
+    padding: 10px 40px; 
+  }
+
+  .project_grid {
+    grid-template-columns: 1fr 1fr; /* Two items per row */
+    grid-row-gap: 40px; 
+    grid-column-gap: 20px;
+  }
+
+  .project_card_image:hover .project_card-cover {
+    /* Remove hover effect for tablet */
+    opacity: 1;
+    transform: none;
+  }
+
+  .project_card-content {
+    opacity: 1; /* Ensure content is visible */
+  }
+}

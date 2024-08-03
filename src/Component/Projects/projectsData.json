@@ -1,0 +1,32 @@
+[
+  {
+    "title": "DevBook",
+    "description": "Developer community",
+    "image": "devbook-cover.png",
+    "alttext": "DevBook cover"
+  },
+  {
+    "title": "E-Market",
+    "description": "Ecommerce platform",
+    "image": "emarket.png",
+    "alttext": "E-Market cover"
+  },
+  {
+    "title": "Netflix Clone",
+    "description": "Clone of Netflix UI",
+    "image": "netflix.png",
+    "alttext": "Neflix clone cover"
+  },
+  {
+    "title": "Autosave Doc Editor",
+    "description": "Document editor with autosave",
+    "image": "doc.png",
+    "alttext": "Autosave Doc cover"
+  },
+  {
+    "title": "ToDo",
+    "description": "Todo List",
+    "image": "todo.png",
+    "alttext": "ToDo cover"
+  }
+]
