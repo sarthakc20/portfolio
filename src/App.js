@@ -10,6 +10,7 @@ import NotFound from "./Component/Layout/Not Found/NotFound.js";
 import Experience from "./Component/Experience/Experience.js";
 import Projects from "./Component/Projects/Projects.js";
 import Blogs from "./Component/Blogs/Blogs.js";
+import ProjectDescription from "./Component/ProjectDescription/ProjectDescription.js";
 
 function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:title" element={<ProjectDescription />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

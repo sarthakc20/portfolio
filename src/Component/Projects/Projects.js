@@ -75,7 +75,7 @@ const Projects = () => {
                   key={index}
                   ref={(el) => (projectRef.current[index] = el)}
                 >
-                  <NavLink to="/" className="project_card_image">
+                  <NavLink to={`/projects/${project.title.toLowerCase()}`} className="project_card_image">
                     <div className="project_card-content">
                       <div>
                         <div className="text-size-medium">{project.title}</div>
