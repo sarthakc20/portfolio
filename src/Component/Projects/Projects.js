@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./project.css";
 import Devbook_img from "../../assets/devbook-cover.png";
 import Emarket from "../../assets/emarket.png";
@@ -20,6 +20,7 @@ const imageMap = {
 const Projects = () => {
   const [projectData, setProjectData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const projectRef = useRef([]);
 
   useEffect(() => {
     import("./projectsData.json")
@@ -33,6 +34,30 @@ const Projects = () => {
       });
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("appear");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    projectRef.current.forEach((item) => {
+      if (item) observer.observe(item);
+    });
+
+    return () => {
+      projectRef.current.forEach((item) => {
+        if (item) observer.unobserve(item);
+      });
+    };
+  }, [projectData]);
+
   return (
     <>
       {loading && <Loader />}
@@ -45,7 +70,11 @@ const Projects = () => {
           <div className="project-list">
             <div className="project_grid">
               {projectData.map((project, index) => (
-                <div className="project-item" key={index}>
+                <div
+                  className="project-item"
+                  key={index}
+                  ref={(el) => (projectRef.current[index] = el)}
+                >
                   <NavLink to="/" className="project_card_image">
                     <div className="project_card-content">
                       <div>
