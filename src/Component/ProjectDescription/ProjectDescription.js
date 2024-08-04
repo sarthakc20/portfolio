@@ -95,16 +95,29 @@ const ProjectDescription = () => {
                 </div>
                 {section.title === "About" && (
                   <div className="btn-container pd-btn-container">
-                    <button className="btn btn-color-2">
+                    <button
+                      className={`btn btn-color-2 ${
+                        !project.link ? "btn-disabled" : ""
+                      }`}
+                      disabled={!project.link}
+                      title={
+                        !project.link
+                          ? `${project.title} has no hosted link`
+                          : ""
+                      }
+                    >
                       <a
-                        href={project.link}
-                        className="pd-btn-link"
+                        href={project.link || "#"}
+                        className={`pd-btn-link ${
+                          !project.link ? "btn-link-disabled" : ""
+                        }`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         Visit site <MdArrowOutward className="btn-icon" />
                       </a>
                     </button>
+
                     <button className="btn btn-color-1">
                       <a
                         href={project.githublink}

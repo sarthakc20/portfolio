@@ -19,8 +19,23 @@
 }
 
 .pd-btn-link {
-  text-decoration: none !important;
+  text-decoration: none;
   color: rgb(6, 46, 111);
+}
+
+.btn-disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.btn-disabled a {
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.3); /* Adjust color as needed */
+}
+
+.btn-link-disabled {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3); /* Adjust color as needed */
 }
 
 .pd-grid-default-parent {
