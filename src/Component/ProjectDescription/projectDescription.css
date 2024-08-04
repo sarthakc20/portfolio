@@ -206,6 +206,7 @@
   .pd-grid-default {
     gap: 16px;
     grid-template-columns: 1fr;
+    display: block;
   }
 
   .pd-fifty-fifty-text-image__text-wrapper,
