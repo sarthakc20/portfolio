@@ -62,9 +62,9 @@
     "description": "Clone of Netflix UI",
     "about": "Recreation of Netflix's user interface.",
     "points": [
-      "Login or sign up to join the community.",
-      "Read, post, update, and delete community posts to share knowledge and resources.",
-      "Access and share quick links to AI websites for developer assistance."
+      "Sign up or log in to enjoy the user experience.",
+      "Browse and discover a vast collection of movies and TV shows.",
+      "Enjoy a seamless experience with responsive design and smooth UI."
     ],
     "image": "netflix.png",
     "alttext": "Netflix clone cover",
@@ -81,7 +81,7 @@
       "Managed user sessions and secure access with Firebase authentication.",
       "Managed the state with Redux."
     ],
-    "link": "https://sarthakc20.github.io/SarthakToDo/",
+    "link": "https://netflix-clone-five-coral-55.vercel.app/",
     "githublink": "https://github.com/sarthakc20/Netflix-Clone"
   },
   {
@@ -90,23 +90,22 @@
     "description": "Document editor with autosave",
     "about": "Harnessing advanced technology for a seamless document editing experience.",
     "points": [
-      "Login or sign up to join the community.",
-      "Read, post, update, and delete community posts to share knowledge and resources.",
-      "Access and share quick links to AI websites for developer assistance."
+      "Edit documents collaboratively in real-time with other users.",
+      "Changes are automatically saved as you type, ensuring no data is lost.",
+      "Format text, colors, and other elements with a rich text editor."
     ],
     "image": "doc.png",
     "alttext": "Autosave Doc cover",
     "screenshots": [
-      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/oe6bqwj46qy459lr7mr9",
-      "https://cdn.example.com/emarket/2.png",
-      "https://cdn.example.com/emarket/2.png"
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/bosoinv08p9d54dqdyiy",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/sx0brbekitjxrwqac2wv",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/fk1jeqj5qwtnedmzbfjl"
     ],
-    "techstack": ["React", "Node.js", "Express", "MongoDB"],
-    "techstackIntro": "Harnessing advanced technology for a seamless document editing experience.",
+    "techstack": ["React", "Node.js", "Express", "socket.io", "MongoDB"],
+    "techstackIntro": "Harnessing advanced technology for a seamless document editing experience with autosave.",
     "details": [
       "Frontend developed with ReactJS, featuring real-time content editing.",
-      "Autosave functionality implemented with Node.js backend.",
-      "Express used for API routing and handling document data.",
+      "Autosave functionality implemented with socket.io powered by Node.js and Express.",
       "MongoDB utilized for efficient document storage and retrieval."
     ],
     "link": "https://sarthakc20.github.io/SarthakToDo/",
@@ -118,24 +117,23 @@
     "description": "Todo List",
     "about": "Built with a modern tech stack for an intuitive and responsive experience.",
     "points": [
-      "Login or sign up to join the community.",
-      "Read, post, update, and delete community posts to share knowledge and resources.",
-      "Access and share quick links to AI websites for developer assistance."
+      "Quickly organize your day.",
+      "Mark tasks as done and clear them off your list with ease.",
+      "Accidental refresh? No problem, your tasks are saved and secure."
     ],
     "image": "todo.png",
     "alttext": "ToDo cover",
     "screenshots": [
-      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/oe6bqwj46qy459lr7mr9",
-      "https://cdn.example.com/emarket/2.png",
-      "https://cdn.example.com/emarket/2.png"
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/lica6rjxcnmjt70unfcr",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/vpd6vmgpmvuydfszpkt0",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/hnpazbpy3x1h0uprplry"
     ],
-    "techstack": ["React", "Node.js", "Express", "MongoDB"],
-    "techstackIntro": "Built with a modern tech stack for an intuitive and responsive experience.",
+    "techstack": ["HTML", "CSS", "JavaScript"],
+    "techstackIntro": "Designed a lightweight and fast-loading experience, perfect for simplicity and easy maintenance.",
     "details": [
-      "Created a user-friendly interface using ReactJS.",
-      "Node.js and Express power the backend API for efficient task management.",
-      "Data storage and retrieval handled by MongoDB.",
-      "Implemented user authentication and session management for secure access."
+      "Built user interface using HTML, CSS and JavaScript.",
+      "By using this to do list user can add list of to do's in order and can delete them.",
+      "It has a local storage, where Todo List’s data can be saved even after refreshingthe web."
     ],
     "link": "https://sarthakc20.github.io/SarthakToDo/",
     "githublink": "https://github.com/sarthakc20/SarthakToDo"
