@@ -1,12 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./project.css";
+import { NavLink } from "react-router-dom";
+import Loader from "../Layout/Loader/Loader.js";
+
+// Image imports
 import Devbook_img from "../../assets/devbook-cover.png";
 import Emarket from "../../assets/emarket.png";
 import Netflix from "../../assets/netflix.png";
 import Doc from "../../assets/doc.png";
 import Todo from "../../assets/todo.png";
-import Loader from "../Layout/Loader/Loader.js";
-import { NavLink } from "react-router-dom";
 
 // Mapping of image filenames to imported images
 const imageMap = {
@@ -75,7 +77,10 @@ const Projects = () => {
                   key={index}
                   ref={(el) => (projectRef.current[index] = el)}
                 >
-                  <NavLink to={`/projects/${project.title.toLowerCase()}`} className="project_card_image">
+                  <NavLink
+                    to={`/projects/${project.title.toLowerCase().replace(/ /g, "-")}/${project.id}`}
+                    className="project_card_image"
+                  >
                     <div className="project_card-content">
                       <div>
                         <div className="text-size-medium">{project.title}</div>

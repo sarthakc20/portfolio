@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./home.css";
-import profilePic from "../../assets/profile-pic.jpeg";
 import resume from "../../assets/Sarthak-Chatterjee Resume.pdf";
 import { MdMail, MdOutlineFileDownload } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
@@ -18,11 +17,13 @@ const Home = () => {
     setIsModalOpen(!isModalOpen);
   };
 
+  const profilePic = "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/zje1qybdxdxxwenhnokh";
+
   return (
     <>
       <section id="profile">
         <div className="section__pic-container">
-          <img src={profilePic} alt="Sarthak Chatterjee profile picture" />
+          <img src={profilePic} alt="Sarthak Chatterjee profile picture" loading="lazy"/>
         </div>
         <div className="section__text">
           <p className="section__text__p1">

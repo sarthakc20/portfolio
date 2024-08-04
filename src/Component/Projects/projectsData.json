@@ -1,32 +1,143 @@
 [
   {
+    "id": 101,
     "title": "DevBook",
     "description": "Developer community",
+    "about": "DevBook aims to cultivate a collaborative and knowledge-sharing environment within the developer community.",
+    "points": [
+      "Login or sign up to join the community.",
+      "Read, post, update, and delete community posts to share knowledge and resources.",
+      "Access and share quick links to AI websites for developer assistance."
+    ],
     "image": "devbook-cover.png",
-    "alttext": "DevBook cover"
+    "alttext": "DevBook cover",
+    "screenshots": [
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/kpvhwu9gksm3873gli7p",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/ltyefbbu3attws72tvve",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/lp3rkqo7ocqjf6qt5tg7"
+    ],
+    "techstack": ["React", "Node.js", "Express", "MongoDB"],
+    "techstackIntro": "Utilizes seamless modern technology stack for robust and scalable solutions.",
+    "details": [
+      "Built frontend using ReactJS which fetches data from MongoDB.",
+      "Markdown support for code language tagging in posts.",
+      "Managed the state with Redux and secured with JWT authentication.",
+      "Used Nodemailer for email sending and Cloudinary for image uploads."
+    ],
+    "link": "https://deevbook.onrender.com",
+    "githublink": "https://github.com/sarthakc20/DevBook"
   },
   {
+    "id": 102,
     "title": "E-Market",
     "description": "Ecommerce platform",
+    "about": "A powerful E-Commerce web app with admin panel.",
+    "points": [
+      "Role-based authentication (user, admin).",
+      "Search, filter, add to cart, and purchase products.",
+      "Add, update, delete products, manage orders, and manage users as admin."
+    ],
     "image": "emarket.png",
-    "alttext": "E-Market cover"
+    "alttext": "E-Market cover",
+    "screenshots": [
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/oe6bqwj46qy459lr7mr9",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/tmqjwjbiz2ntfizrz9gy",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/ami91llco6q7lw2uvtps"
+    ],
+    "techstack": ["React", "Node.js", "Express", "MongoDB"],
+    "techstackIntro": "Leverages a cutting-edge tech stack for a seamless shopping experience.",
+    "details": [
+      "Implemented a responsive and dynamic frontend using ReactJS which fetches data from MongoDB.",
+      "Backend API built with Node.js and Express for efficient data handling.",
+      "Implemented Redux for state management.",
+      "Integrated Stripe payment gateways and secured transactions with JWT authentication.",
+      "Created an Admin Panel to manage products, users, orders, and roles."
+    ],
+    "link": "https://e-market-cpea.onrender.com",
+    "githublink": "https://github.com/sarthakc20/E-MARKET"
   },
   {
+    "id": 103,
     "title": "Netflix Clone",
     "description": "Clone of Netflix UI",
+    "about": "Recreation of Netflix's user interface.",
+    "points": [
+      "Login or sign up to join the community.",
+      "Read, post, update, and delete community posts to share knowledge and resources.",
+      "Access and share quick links to AI websites for developer assistance."
+    ],
     "image": "netflix.png",
-    "alttext": "Neflix clone cover"
+    "alttext": "Netflix clone cover",
+    "screenshots": [
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/tz6f8da4rtffsdhvh7v0",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/cpiedtx5o04tjbmf5za3",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/pc3kltgu6a7s75qcc5j2"
+    ],
+    "techstack": ["React", "Redux", "TMDB API", "Firebase"],
+    "techstackIntro": "Crafted with a modern tech stack for a smooth and engaging user experience.",
+    "details": [
+      "Recreated Netflix UI with responsive design using ReactJS for the frontend.",
+      "Data fetched from TMDB API.",
+      "Managed user sessions and secure access with Firebase authentication.",
+      "Managed the state with Redux."
+    ],
+    "link": "https://sarthakc20.github.io/SarthakToDo/",
+    "githublink": "https://github.com/sarthakc20/Netflix-Clone"
   },
   {
+    "id": 104,
     "title": "Autosave Doc Editor",
     "description": "Document editor with autosave",
+    "about": "Harnessing advanced technology for a seamless document editing experience.",
+    "points": [
+      "Login or sign up to join the community.",
+      "Read, post, update, and delete community posts to share knowledge and resources.",
+      "Access and share quick links to AI websites for developer assistance."
+    ],
     "image": "doc.png",
-    "alttext": "Autosave Doc cover"
+    "alttext": "Autosave Doc cover",
+    "screenshots": [
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/oe6bqwj46qy459lr7mr9",
+      "https://cdn.example.com/emarket/2.png",
+      "https://cdn.example.com/emarket/2.png"
+    ],
+    "techstack": ["React", "Node.js", "Express", "MongoDB"],
+    "techstackIntro": "Harnessing advanced technology for a seamless document editing experience.",
+    "details": [
+      "Frontend developed with ReactJS, featuring real-time content editing.",
+      "Autosave functionality implemented with Node.js backend.",
+      "Express used for API routing and handling document data.",
+      "MongoDB utilized for efficient document storage and retrieval."
+    ],
+    "link": "https://sarthakc20.github.io/SarthakToDo/",
+    "githublink": "https://github.com/sarthakc20/Autosave-Doc-Editor"
   },
   {
+    "id": 105,
     "title": "ToDo",
     "description": "Todo List",
+    "about": "Built with a modern tech stack for an intuitive and responsive experience.",
+    "points": [
+      "Login or sign up to join the community.",
+      "Read, post, update, and delete community posts to share knowledge and resources.",
+      "Access and share quick links to AI websites for developer assistance."
+    ],
     "image": "todo.png",
-    "alttext": "ToDo cover"
+    "alttext": "ToDo cover",
+    "screenshots": [
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/oe6bqwj46qy459lr7mr9",
+      "https://cdn.example.com/emarket/2.png",
+      "https://cdn.example.com/emarket/2.png"
+    ],
+    "techstack": ["React", "Node.js", "Express", "MongoDB"],
+    "techstackIntro": "Built with a modern tech stack for an intuitive and responsive experience.",
+    "details": [
+      "Created a user-friendly interface using ReactJS.",
+      "Node.js and Express power the backend API for efficient task management.",
+      "Data storage and retrieval handled by MongoDB.",
+      "Implemented user authentication and session management for secure access."
+    ],
+    "link": "https://sarthakc20.github.io/SarthakToDo/",
+    "githublink": "https://github.com/sarthakc20/SarthakToDo"
   }
 ]
