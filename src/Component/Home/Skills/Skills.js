@@ -59,7 +59,7 @@ const Skills = () => {
   return (
     <>
       <div className="exp-title">
-        <h1 className="title name">Skills</h1>
+        <h1 className="title name skill-title">Skills</h1>
       </div>
       <div className="skills-grid" ref={skillsRef}>
         {skills.map((skill, index) => (

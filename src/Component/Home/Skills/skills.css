@@ -60,3 +60,11 @@
     height: 40px;
   }
 }
+
+/* iPhone SE */
+@media (min-width: 359px) and (max-width: 376px) {
+  .skill-title {
+    margin-top: 20vmax;
+  }
+  
+}

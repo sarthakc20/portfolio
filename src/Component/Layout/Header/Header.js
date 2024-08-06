@@ -7,7 +7,7 @@ const Header = () => {
     <div className="header">
       <ul className="navbar-list">
         <li>
-          <NavLink className="navbar-link" to="/" exact>
+          <NavLink className="navbar-link" to="/">
             Home
           </NavLink>
         </li>
