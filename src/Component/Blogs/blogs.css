@@ -3,18 +3,21 @@
 }
 
 .blog_section {
-  padding: 0 30px;
+  padding: 0 70px;
 }
 
 .blog-card {
   display: flex;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .blog-image {
   width: 45%;
+  height: 41vh;
   object-fit: fill;
   border-radius: 8px;
+  margin-top: 21px;
 }
 
 .blog-content {
@@ -42,13 +45,17 @@
   }
 }
 
+.blog-card > div:last-child {
+  margin-bottom: 1px;
+}
+
+
 /* Coming Soon Section */
 .coming-soon-container {
   display: flex;
   flex-direction: 1fr 1fr;
   align-items: center;
   justify-content: center;
-  margin-top: 18vh;
   margin-bottom: 5vh;
   color: #6f6f6f;
   text-align: center;
@@ -123,6 +130,7 @@
     width: 100%;
     height: auto;
     border-radius: 8px 8px 0 0;
+    margin-top: 0;
   }
 
   .blog-content {

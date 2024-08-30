@@ -3,9 +3,17 @@
       "title": "Promise in JavaScript",
       "cover_image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/jemtmsimatchpsjjukap",
       "blog_description": "According to MDN documentation 'The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.' You may think that what is written over here. Yeah! It is really hard to understand specially for someone who is pretty new at JavaScript programming, web development and stuffs like that. But now let's understand the Promise together in the simplest way.",
-      "topic": ["JavaScript", "Promise"],
+      "topic": ["JavaScript", "Promise", "ES6"],
       "posted_on": "Jul 19, 2023",
       "blog_link": "https://dev.to/sarthakc20/promise-in-javascript-3mpc"
+    },
+    {
+      "title": "What is liquid (Shopify)?",
+      "cover_image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/akzfkzohyvaf7ezqg7bd",
+      "blog_description": "Liquid is a template language created by Shopify. It's available as an open source project on GitHub, and is used by many different software projects and companies.This reference documents the Liquid tags, filters, and objects that you can use to build Shopify Themes.With Liquid, you can create your own variables to store and reuse data. It helps you build and personalize your site by combining static content with dynamic elements.",
+      "topic": ["Shopify", "Liquid", "Template language"],
+      "posted_on": "Aug 30, 2024",
+      "blog_link": "https://dev.to/sarthakc20/what-is-liquid-shopify--eg4"
     }
   ]
   
