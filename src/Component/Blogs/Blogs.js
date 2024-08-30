@@ -3,6 +3,7 @@ import "./blogs.css";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaCircleChevronRight } from "react-icons/fa6";
 import { MdArrowForward } from "react-icons/md";
+import Loader from "../Layout/Loader/Loader";
 
 const Blogs = () => {
   const [blogsData, setBlogsData] = useState([]);
@@ -26,49 +27,51 @@ const Blogs = () => {
 
   return (
     <>
+      {loading && <Loader />}
       <div className="blogs">
         <div className="exp-title">
           <h1 className="title name">Blogs</h1>
         </div>
         <div className="blog_section">
-        {blogsData.map((blog, index) => (
-          <div key={index} className="blog-card exp-text-box">
-            <img
-              src={blog.cover_image}
-              alt={blog.title}
-              className="blog-image"
-            />
-            <div className="blog-content">
-              <h2>{blog.title}</h2>
-              <small>
-                  <FaCalendarAlt className="btn-icon" /> Posted on: {blog.posted_on}
+          {blogsData.map((blog, index) => (
+            <div key={index} className="blog-card exp-text-box">
+              <img
+                src={blog.cover_image}
+                alt={blog.title}
+                className="blog-image"
+              />
+              <div className="blog-content">
+                <h2>{blog.title}</h2>
+                <small>
+                  <FaCalendarAlt className="btn-icon" /> Posted on:{" "}
+                  {blog.posted_on}
                 </small>
                 <div>
-                {blog.topic.map((topic, idx) => (
-                    <h3 key={idx}>
-                    {topic}</h3>
+                  {blog.topic.map((topic, idx) => (
+                    <h3 key={idx}>{topic}</h3>
                   ))}
                 </div>
-                  <div>
-                    <p>
-                      <FaCircleChevronRight className="exp-icon" /> {blog.blog_description}
-                    </p>
-                  </div>
-                  <div className="blog-button">
+                <div>
+                  <p>
+                    <FaCircleChevronRight className="exp-icon" />{" "}
+                    {blog.blog_description}
+                  </p>
+                </div>
+                <div className="blog-button">
                   <button className="btn btn-color-1">
-                      <a
-                        href={blog.blog_link}
-                        className="pd-btn-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Read More <MdArrowForward className="btn-icon" />
-                      </a>
-                    </button>
-                    </div>
+                    <a
+                      href={blog.blog_link}
+                      className="pd-btn-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Read More <MdArrowForward className="btn-icon" />
+                    </a>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
       <div className="coming-soon-container">
