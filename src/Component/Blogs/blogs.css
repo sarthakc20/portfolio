@@ -28,6 +28,22 @@
   margin-top: 25px;
 }
 
+.read_more-icon-animation {
+  animation: moveIcon 2s linear infinite;
+}
+
+@keyframes moveIcon {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  50% {
+    transform: translateX(10px); /* Midway position to the right */
+  }
+  100% {
+    transform: translateX(0); /* End position, back to the starting point */
+  }
+}
+
 /* Coming Soon Section */
 .coming-soon-container {
   display: flex;

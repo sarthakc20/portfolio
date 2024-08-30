@@ -65,7 +65,7 @@ const Blogs = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Read More <MdArrowForward className="btn-icon" />
+                      Read More <MdArrowForward className="btn-icon read_more-icon-animation" />
                     </a>
                   </button>
                 </div>
