@@ -1,0 +1,11 @@
+[
+    {
+      "title": "Promise in JavaScript",
+      "cover_image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/jemtmsimatchpsjjukap",
+      "blog_description": "According to MDN documentation 'The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.' You may think that what is written over here. Yeah! It is really hard to understand specially for someone who is pretty new at JavaScript programming, web development and stuffs like that. But now let's understand the Promise together in the simplest way.",
+      "topic": ["JavaScript", "Promise"],
+      "posted_on": "Jul 19, 2023",
+      "blog_link": "https://dev.to/sarthakc20/promise-in-javascript-3mpc"
+    }
+  ]
+  
