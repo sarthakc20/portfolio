@@ -54,96 +54,130 @@ const ProjectDescription = () => {
   ];
 
   return (
-    <div className="project-description">
-      <div className="description-title">
-        <h1 className="title name">{project.title}</h1>
-      </div>
+    <>
+      <div className="project-description-block1">
+        <div className="description-title">
+          <h1 className="title name">{project.title}</h1>
+        </div>
 
-      {sections.map((section, index) => (
-        <div
-          className={`pd-fifty-fifty-text-image ${
-            index % 2 === 1 ? "pd-fifty-fifty-text-image--reversed" : ""
-          }`}
-          key={index}
-        >
-          <div className="pd-grid-default-parent">
-            <div className="pd-grid-default">
-              <div className="pd-fifty-fifty-text-image__text-wrapper">
-                <div>
-                  <h2 className="pd-eyebrow pd-fifty-fifty-text-image__eyebrow">
-                    {section.title}
-                  </h2>
-                  <h3 className="pd-headline pd-fifty-fifty-text-image__heading">
-                    {section.title === "About"
-                      ? `What is ${project.title}?`
-                      : `${section.title} of ${project.title}`}
-                  </h3>
-                  <p className="pd-copy pd-fifty-fifty-text-image__description">
-                    {section.description}
-                  </p>
-                  <ul className="pd-fifty-fifty-text-image__list">
-                    {section.list &&
-                      section.list.map((item, i) => (
-                        <li
-                          className="pd-copy pd-fifty-fifty-text-image__list-item"
-                          key={i}
-                        >
-                          <FaCircleChevronRight className="exp-icon" /> {item}
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-                {section.title === "About" && (
-                  <div className="btn-container pd-btn-container">
-                    <button
-                      className={`btn btn-color-2 ${
-                        !project.link ? "btn-disabled" : ""
-                      }`}
-                      disabled={!project.link}
-                      title={
-                        !project.link
-                          ? `${project.title} has no hosted link`
-                          : ""
-                      }
-                    >
-                      <a
-                        href={project.link || "#"}
-                        className={`pd-btn-link ${
-                          !project.link ? "btn-link-disabled" : ""
-                        }`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Visit site <MdArrowOutward className="btn-icon" />
-                      </a>
-                    </button>
-
-                    <button className="btn btn-color-1">
-                      <a
-                        href={project.githublink}
-                        className="pd-btn-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        GitHub Link <FaGithub className="btn-icon" />
-                      </a>
-                    </button>
+        {sections.map((section, index) => (
+          <div
+            className={`pd-fifty-fifty-text-image ${
+              index % 2 === 1 ? "pd-fifty-fifty-text-image--reversed" : ""
+            }`}
+            key={index}
+          >
+            <div className="pd-grid-default-parent">
+              <div className="pd-grid-default">
+                <div className="pd-fifty-fifty-text-image__text-wrapper">
+                  <div>
+                    <h2 className="pd-eyebrow pd-fifty-fifty-text-image__eyebrow">
+                      {section.title}
+                    </h2>
+                    <h3 className="pd-headline pd-fifty-fifty-text-image__heading">
+                      {section.title === "About"
+                        ? `What is ${project.title}?`
+                        : `${section.title} of ${project.title}`}
+                    </h3>
+                    <p className="pd-copy pd-fifty-fifty-text-image__description">
+                      {section.description}
+                    </p>
+                    <ul className="pd-fifty-fifty-text-image__list">
+                      {section.list &&
+                        section.list.map((item, i) => (
+                          <li
+                            className="pd-copy pd-fifty-fifty-text-image__list-item"
+                            key={i}
+                          >
+                            <FaCircleChevronRight className="exp-icon" /> {item}
+                          </li>
+                        ))}
+                    </ul>
                   </div>
-                )}
-              </div>
-              <div className="pd-fifty-fifty-text-image__image-wrapper">
-                <img
-                  className="pd-fifty-fifty-text-image__image"
-                  src={project.screenshots[index] || project.screenshots[0]}
-                  alt={`${section.title} of ${project.title}`}
-                  loading="lazy" // Lazy load the image
-                />
+                  {section.title === "About" && (
+                    <div className="btn-container pd-btn-container">
+                      <button
+                        className={`btn btn-color-2 ${
+                          !project.link ? "btn-disabled" : ""
+                        }`}
+                        disabled={!project.link}
+                        title={
+                          !project.link
+                            ? `${project.title} has no hosted link`
+                            : ""
+                        }
+                      >
+                        <a
+                          href={project.link || "#"}
+                          className={`pd-btn-link ${
+                            !project.link ? "btn-link-disabled" : ""
+                          }`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Visit site <MdArrowOutward className="btn-icon" />
+                        </a>
+                      </button>
+
+                      <button className="btn btn-color-1">
+                        <a
+                          href={project.githublink}
+                          className="pd-btn-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          GitHub Link <FaGithub className="btn-icon" />
+                        </a>
+                      </button>
+                    </div>
+                  )}
+                </div>
+                <div className="pd-fifty-fifty-text-image__image-wrapper">
+                  <img
+                    className="pd-fifty-fifty-text-image__image"
+                    src={project.screenshots[index] || project.screenshots[0]}
+                    alt={`${section.title} of ${project.title}`}
+                    loading="lazy" // Lazy load the image
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+
+      <div className="project-description-block2">
+        {project.screenshots_grid && project.screenshots_grid.length === 3 ? (
+          <div className="grid-gallery">
+            {/* Full-size image */}
+            <div className="grid-gallery__full-image">
+              <img
+                src={project.screenshots_grid[0]}
+                alt={`${project.title} Screenshot 1`}
+                loading="lazy"
+              />
+            </div>
+            {/* Two half-size images */}
+            <div className="grid-gallery__half-images">
+              <img
+                src={project.screenshots_grid[1]}
+                alt={`${project.title} Screenshot 2`}
+                className="half-image"
+                loading="lazy"
+              />
+              <img
+                src={project.screenshots_grid[2]}
+                alt={`${project.title} Screenshot 3`}
+                className="half-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
+      </div>
+    </>
   );
 };
 

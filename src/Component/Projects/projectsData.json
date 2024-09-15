@@ -16,6 +16,22 @@
       "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/ltyefbbu3attws72tvve",
       "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/lp3rkqo7ocqjf6qt5tg7"
     ],
+    "screenshots_grid": [
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/eklzqkvzh4idrhoubo56",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/vqdlrb1qc4dlmq42vwvn",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/jwp3mzm4hhmung039onf"
+    ],
+    "screenshots_slide": [
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/jyvcz0z0vjzapnoyd8jx",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/xmo6kf3csd25o50gagtc",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/oerpq2fajmufhtbairqa",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/ajoo4gfnvpfqqyaduoib",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/s5xdd9vfazolfcomtx0u",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/dlqhu91t1h5yclboendq",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/wvyguwlxdnuaqbh0cv8m",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/w0twtqntuezvfcmewsow",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/u68fbenxg6yhekm6zasd"
+    ],
     "techstack": ["React", "Node.js", "Express", "MongoDB"],
     "techstackIntro": "Utilizes seamless modern technology stack for robust and scalable solutions.",
     "details": [
@@ -25,7 +41,14 @@
       "Used Nodemailer for email sending and Cloudinary for image uploads."
     ],
     "link": "https://deevbook.onrender.com",
-    "githublink": "https://github.com/sarthakc20/DevBook"
+    "githublink": "https://github.com/sarthakc20/DevBook",
+    "challenges": [
+      "Implementing markdown support for code language tagging in posts.",
+      "Efficiently handling large amounts of user-generated content.",
+      "Integrating a secure email verification and authentication system."
+    ],
+    "solution": "Implemented ReactMarkdown with syntax highlighting using `react-syntax-highlighter` and `remarkGfm`. Managed data efficiently with MongoDB, and integrated Nodemailer with JWT-based authentication for secure email verification.",
+    "result": "The markdown system was successfully integrated, enhancing the user experience by allowing proper code formatting. User engagement increased with verified and secure login/signup processes."
   },
   {
     "id": 102,
@@ -54,7 +77,14 @@
       "Created an Admin Panel to manage products, users, orders, and roles."
     ],
     "link": "https://e-market-cpea.onrender.com",
-    "githublink": "https://github.com/sarthakc20/E-MARKET"
+    "githublink": "https://github.com/sarthakc20/E-MARKET",
+    "challenges": [
+      "Setting up role-based authentication with separate privileges for users and admins.",
+      "Efficiently handling payment gateways while maintaining security.",
+      "Managing a large product database and ensuring quick data retrieval."
+    ],
+    "solution": "Used JWT-based authentication for role separation. Integrated Stripe for secure payment handling and implemented MongoDB indexing for faster data queries in the admin and user dashboard.",
+    "result": "The app provided a seamless shopping experience, with secure and efficient transaction handling. The role-based system worked flawlessly, giving admin users complete control over the platform."
   },
   {
     "id": 103,
@@ -82,7 +112,14 @@
       "Managed the state with Redux."
     ],
     "link": "https://netflix-clone-five-coral-55.vercel.app/",
-    "githublink": "https://github.com/sarthakc20/Netflix-Clone"
+    "githublink": "https://github.com/sarthakc20/Netflix-Clone",
+    "challenges": [
+      "Integrating TMDB API to fetch real-time data for movies and TV shows.",
+      "Handling user authentication and session management securely.",
+      "Ensuring the app was responsive and provided a smooth user experience on all devices."
+    ],
+    "solution": "Used Firebase authentication for secure user sessions and integrated the TMDB API for real-time content fetching. Applied advanced CSS techniques and media queries for a responsive design.",
+    "result": "The app successfully replicated Netflix's UI, providing a seamless and engaging experience across all devices with secure user authentication."
   },
   {
     "id": 104,
@@ -109,7 +146,14 @@
       "MongoDB utilized for efficient document storage and retrieval."
     ],
     "link": null,
-    "githublink": "https://github.com/sarthakc20/Autosave-Doc-Editor"
+    "githublink": "https://github.com/sarthakc20/Autosave-Doc-Editor",
+    "challenges": [
+      "Implementing real-time collaboration with minimal latency.",
+      "Ensuring data consistency across multiple users editing the same document.",
+      "Handling autosave functionality efficiently without overwhelming the server."
+    ],
+    "solution": "Used socket.io to manage real-time data exchange and updates between multiple users. Implemented autosave using debouncing techniques to prevent excessive server load.",
+    "result": "Real-time collaboration and autosave worked smoothly, allowing multiple users to edit documents simultaneously without data loss."
   },
   {
     "id": 105,
@@ -136,6 +180,13 @@
       "It has a local storage, where Todo List’s data can be saved even after refreshingthe web."
     ],
     "link": "https://sarthakc20.github.io/SarthakToDo/",
-    "githublink": "https://github.com/sarthakc20/SarthakToDo"
+    "githublink": "https://github.com/sarthakc20/SarthakToDo",
+    "challenges": [
+      "Implementing drag-and-drop functionality for task prioritization.",
+      "Managing user sessions and task data securely.",
+      "Ensuring a seamless experience across devices and browsers."
+    ],
+    "solution": "Implemented drag-and-drop using `react-beautiful-dnd`. Used JWT for secure user authentication and MongoDB to store task data, ensuring efficient data retrieval.",
+    "result": "The app provided a user-friendly task management interface, with smooth drag-and-drop functionality and secure user sessions across devices."
   }
 ]
