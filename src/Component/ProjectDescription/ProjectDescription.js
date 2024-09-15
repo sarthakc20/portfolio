@@ -147,6 +147,26 @@ const ProjectDescription = () => {
       </div>
 
       <div className="project-description-block2">
+        <div className="challenges__container">
+          <h3 className="pd-headline pd-fifty-fifty-text-image__heading">
+            Challenges
+          </h3>
+          <ul className="pd-fifty-fifty-text-image__list">
+            {project.challenges &&
+              project.challenges.map((item, i) => {
+                const [firstLine, ...rest] = item.split(".");
+                return (
+                  <li
+                    className="pd-copy pd-fifty-fifty-text-image__list-item"
+                    key={i}
+                  >
+                    <FaCircleChevronRight className="exp-icon" />{" "}
+                    <span>{firstLine}.</span> {rest.join(".")}
+                  </li>
+                );
+              })}
+          </ul>
+        </div>
         {project.screenshots_grid && project.screenshots_grid.length === 3 ? (
           <div className="grid-gallery">
             {/* Full-size image */}
@@ -176,6 +196,49 @@ const ProjectDescription = () => {
         ) : (
           <></>
         )}
+        <div className="challenges__container">
+          <h3 className="pd-headline pd-fifty-fifty-text-image__heading">
+            Solution
+          </h3>
+          <p>
+            <FaCircleChevronRight className="exp-icon" /> {project.solution}
+          </p>
+        </div>
+
+        {project.screenshots_slide ? (
+          <div className="carousel-container">
+            <div className="carousel">
+              {/* Clone the images to create an infinite effect */}
+              {project.screenshots_slide.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Screenshot ${index}`}
+                  className="carousel-image"
+                />
+              ))}
+              {project.screenshots_slide.map((image, index) => (
+                <img
+                  key={index + project.screenshots_slide.length}
+                  src={image}
+                  alt={`Screenshot ${index}`}
+                  className="carousel-image"
+                />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
+
+        <div className="challenges__container">
+          <h3 className="pd-headline pd-fifty-fifty-text-image__heading">
+            Result
+          </h3>
+          <p>
+            <FaCircleChevronRight className="exp-icon" /> {project.result}
+          </p>
+        </div>
       </div>
     </>
   );

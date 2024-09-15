@@ -169,6 +169,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 2vmax;
 }
 
 .grid-gallery__full-image {
@@ -191,6 +192,54 @@
   object-fit: cover;
   border-radius: 20px;
 }
+
+.challenges__container {
+  margin-bottom: 3vmax;
+}
+
+.challenges__container h3 {
+  color: rgb(6, 46, 111);
+}
+
+.challenges__container ul li, .challenges__container p {
+  padding: 0.3vmax;
+  font-size: 1.1rem;
+}
+
+.challenges__container ul li span{
+  /* color: rgb(79, 143, 246); */
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px; /* Adjust the gap between images */
+  animation: scrollLeft 15s linear infinite; /* Infinite scroll animation */
+}
+
+.carousel-image {
+  width: 650px; /* Adjust the size of the images */
+  height: auto;
+  border-radius: 8px;
+}
+
+@keyframes scrollLeft {
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(-100%);
+  }
+}
+
+
 
 
 /* Tablet view */
