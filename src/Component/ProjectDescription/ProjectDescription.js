@@ -5,6 +5,13 @@ import Loader from "../Layout/Loader/Loader.js";
 import { FaCircleChevronRight } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
+// core version + navigation, pagination modules:
+import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
+// import Swiper and modules styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const ProjectDescription = () => {
   const { projectId } = useParams();
@@ -26,6 +33,37 @@ const ProjectDescription = () => {
         setLoading(false); // Hide loader even if there's an error
       });
   }, [projectId]);
+
+  useEffect(() => {
+    const swiper = new Swiper(".carousel-container", {
+      modules: [Navigation, Pagination],
+      loop: true,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1020: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  }, []);  // Empty dependency array so it runs only once after mounting
 
   if (loading) {
     return <Loader />;
@@ -205,30 +243,24 @@ const ProjectDescription = () => {
           </p>
         </div>
 
-        {project.screenshots_slide ? (
-          <div className="carousel-container">
-            <div className="carousel">
-              {/* Clone the images to create an infinite effect */}
+        {project.screenshots_slide && (
+          <div className="swiper carousel-container">
+            <div className="swiper-wrapper">
               {project.screenshots_slide.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`Screenshot ${index}`}
-                  className="carousel-image"
-                />
-              ))}
-              {project.screenshots_slide.map((image, index) => (
-                <img
-                  key={index + project.screenshots_slide.length}
-                  src={image}
-                  alt={`Screenshot ${index}`}
-                  className="carousel-image"
-                />
+                <div className="swiper-slide" key={index}>
+                  <img
+                    src={image}
+                    alt={`Screenshot ${index}`}
+                    className="carousel-image"
+                  />
+                </div>
               ))}
             </div>
+
+            {/* Pagination and navigation buttons */}
+            <div className="swiper-button-prev"></div>
+            <div className="swiper-button-next"></div>
           </div>
-        ) : (
-          <></>
         )}
 
         <div className="challenges__container">
