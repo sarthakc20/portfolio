@@ -70,6 +70,22 @@
       "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/tmqjwjbiz2ntfizrz9gy",
       "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/ami91llco6q7lw2uvtps"
     ],
+    "screenshots_grid": [
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/f9n44vp00qiw9zscffne",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/gjr0hvm20i5eoufwnuyo",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/fthpqrzkrwsipotmgepq"
+    ],
+    "screenshots_slide": [
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/cfxelh3r2qkctjccote1",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/fitd5w0ltx3wlgyhoyua",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/lidhjtbule80l8x5bxyx",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/jyknkct3igj0rhow8n70",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/oe6j9mvtbtfzsxzfrwgi",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/hxhw8bxebhzh5pecwcmm",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/z4ewqedoxlocsbhab6yz",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/tin7uf0inlevmzrnhqcf",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/gjr0hvm20i5eoufwnuyo"
+    ],
     "techstack": ["React", "Node.js", "Express", "MongoDB"],
     "techstackIntro": "Leverages a cutting-edge tech stack for a seamless shopping experience.",
     "details": [
@@ -82,11 +98,11 @@
     "link": "https://e-market-cpea.onrender.com",
     "githublink": "https://github.com/sarthakc20/E-MARKET",
     "challenges": [
-      "Setting up role-based authentication with separate privileges for users and admins.",
-      "Efficiently handling payment gateways while maintaining security.",
-      "Managing a large product database and ensuring quick data retrieval."
+      "Setting up role-based authentication with separate privileges for users and admins.Implementing protected routes that restrict access based on user roles. Using middleware to verify user authentication and check if the user has appropriate privileges before accessing admin-specific features. For instance, admins can access the dashboard, manage users, and modify settings, while regular users are restricted to non-administrative pages.",
+      "Efficiently handling payment gateways while maintaining security. Integrating secure payment gateway like Stripe to process transactions. Using tokenization and encryption to ensure customer payment details are protected.",
+      "Managing a large product database and ensuring quick data retrieval. Achiving fast relode timing"
     ],
-    "solution": "Used JWT-based authentication for role separation. Integrated Stripe for secure payment handling and implemented MongoDB indexing for faster data queries in the admin and user dashboard.",
+    "solution": "Used JWT-based authentication and protected routes for role separation. Integrated Stripe for secure payment handling and implemented MongoDB indexing for faster data queries in the admin and user dashboard. Utilized a Content Delivery Network (CDN) to deliver static assets such as images and scripts faster, reducing load times for product pages. These optimizations help improve performance, even with a large number of products in the database.",
     "result": "The app provided a seamless shopping experience, with secure and efficient transaction handling. The role-based system worked flawlessly, giving admin users complete control over the platform."
   },
   {
@@ -106,6 +122,9 @@
       "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/cpiedtx5o04tjbmf5za3",
       "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/pc3kltgu6a7s75qcc5j2"
     ],
+    "screenshots_grid": [
+      "https://res.cloudinary.com/dfl9wcmy4/video/upload/v1727868606/my%20portfolio/byvletpidy7qtklafljj.mp4"
+    ],
     "techstack": ["React", "Redux", "TMDB API", "Firebase"],
     "techstackIntro": "Crafted with a modern tech stack for a smooth and engaging user experience.",
     "details": [
@@ -117,9 +136,9 @@
     "link": "https://netflix-clone-five-coral-55.vercel.app/",
     "githublink": "https://github.com/sarthakc20/Netflix-Clone",
     "challenges": [
-      "Integrating TMDB API to fetch real-time data for movies and TV shows.",
-      "Handling user authentication and session management securely.",
-      "Ensuring the app was responsive and provided a smooth user experience on all devices."
+      "Integrating TMDB API to fetch real-time data for movies and TV shows. Managing API rate limits and ensuring data consistency while dynamically loading content was challenging, especially when handling various endpoints and large datasets.",
+      "Handling user authentication and session management securely. Ensuring that user tokens were stored securely and managing session timeouts, alongside implementing protected routes for authenticated users, required careful planning.",
+      "Ensuring the app was responsive and provided a smooth user experience on all devices. Making the interface adaptable to different screen sizes, while optimizing load times and maintaining a seamless navigation experience across platforms, was a key challenge."
     ],
     "solution": "Used Firebase authentication for secure user sessions and integrated the TMDB API for real-time content fetching. Applied advanced CSS techniques and media queries for a responsive design.",
     "result": "The app successfully replicated Netflix's UI, providing a seamless and engaging experience across all devices with secure user authentication."

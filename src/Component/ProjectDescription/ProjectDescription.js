@@ -181,35 +181,51 @@ const ProjectDescription = () => {
               })}
           </ul>
         </div>
-        {project.screenshots_grid && project.screenshots_grid.length === 3 ? (
+
+        {project.screenshots_grid && project.screenshots_grid.length > 0 ? (
           <div className="grid-gallery">
-            {/* Full-size image */}
-            <div className="grid-gallery__full-image">
-              <img
-                src={project.screenshots_grid[0]}
-                alt={`${project.title} Screenshot 1`}
-                loading="lazy"
-              />
-            </div>
-            {/* Two half-size images */}
-            <div className="grid-gallery__half-images">
-              <img
-                src={project.screenshots_grid[1]}
-                alt={`${project.title} Screenshot 2`}
-                className="half-image"
-                loading="lazy"
-              />
-              <img
-                src={project.screenshots_grid[2]}
-                alt={`${project.title} Screenshot 3`}
-                className="half-image"
-                loading="lazy"
-              />
-            </div>
+            {/* Check if the first item is a video by its file extension */}
+            {project.screenshots_grid[0].endsWith(".mp4") ? (
+              <div className="grid-gallery__full-imag">
+                <video autoPlay muted loop controls>
+                  <source src={project.screenshots_grid[0]} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            ) : (
+              <>
+                {/* Full-size image */}
+                <div className="grid-gallery__full-image">
+                  <img
+                    src={project.screenshots_grid[0]}
+                    alt={`${project.title} Screenshot 1`}
+                    loading="lazy"
+                  />
+                </div>
+                {/* Two half-size images */}
+                {project.screenshots_grid.length === 3 && (
+                  <div className="grid-gallery__half-images">
+                    <img
+                      src={project.screenshots_grid[1]}
+                      alt={`${project.title} Screenshot 2`}
+                      className="half-image"
+                      loading="lazy"
+                    />
+                    <img
+                      src={project.screenshots_grid[2]}
+                      alt={`${project.title} Screenshot 3`}
+                      className="half-image"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+              </>
+            )}
           </div>
         ) : (
           <></>
         )}
+
         <div className="challenges__container">
           <h3 className="pd-headline pd-fifty-fifty-text-image__heading">
             Solution
