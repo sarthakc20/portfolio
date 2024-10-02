@@ -380,6 +380,10 @@
     margin: 3vmax 2vmax 0 2vmax;
   }
 
+  .challenges__container ul li, .challenges__container p {
+    font-size: 1rem;
+  }
+
   .grid-gallery {
     gap: 6px;
   }
