@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./projectDescription.css";
 import Loader from "../Layout/Loader/Loader.js";
 import { FaCircleChevronRight } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
-// core version + navigation, pagination modules:
-import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
-// import Swiper and modules styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const ProjectDescription = () => {
   const { projectId } = useParams();
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const swiperRef = useRef(null);
 
   useEffect(() => {
     import("../Projects/projectsData.json")
@@ -26,44 +21,13 @@ const ProjectDescription = () => {
           (proj) => proj.id === parseInt(projectId)
         );
         setProject(selectedProject);
-        setLoading(false); // Hide loader when data is ready
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error loading JSON data:", error);
-        setLoading(false); // Hide loader even if there's an error
+        setLoading(false);
       });
   }, [projectId]);
-
-  useEffect(() => {
-    const swiper = new Swiper(".carousel-container", {
-      modules: [Navigation, Pagination],
-      loop: true,
-      spaceBetween: 20,
-      autoplay: {
-        delay: 6000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1020: {
-          slidesPerView: 3,
-        },
-      },
-    });
-  }, []);  // Empty dependency array so it runs only once after mounting
 
   if (loading) {
     return <Loader />;
@@ -72,6 +36,18 @@ const ProjectDescription = () => {
   if (!project) {
     return <div>Project not found</div>;
   }
+
+  const handleNext = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === project.screenshots_slide.length - 1 ? 0 : prevSlide + 1
+    );
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? project.screenshots_slide.length - 1 : prevSlide - 1
+    );
+  };
 
   const sections = [
     {
@@ -243,25 +219,39 @@ const ProjectDescription = () => {
           </p>
         </div>
 
-        {project.screenshots_slide && (
-          <div className="swiper carousel-container">
-            <div className="swiper-wrapper">
-              {project.screenshots_slide.map((image, index) => (
-                <div className="swiper-slide" key={index}>
-                  <img
-                    src={image}
-                    alt={`Screenshot ${index}`}
-                    className="carousel-image"
-                  />
+        <div className="custom-swiper-container">
+          {project.screenshots_slide && (
+            <div className="custom-swiper">
+              <div className="carousel-container" ref={swiperRef}>
+                <div
+                  className="swiper-wrapper"
+                  style={{
+                    transform: `translateX(-${currentSlide * 100}%)`,
+                    transition: "transform 0.5s ease-in-out",
+                  }}
+                >
+                  {project.screenshots_slide.map((image, index) => (
+                    <div className="swiper-slide" key={index}>
+                      <img
+                        src={image}
+                        alt={`Screenshot ${index}`}
+                        className="carousel-image"
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
 
-            {/* Pagination and navigation buttons */}
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
-          </div>
-        )}
+                {/* Navigation buttons */}
+                <button className="swiper-button-prev" onClick={handlePrev}>
+                  &#10094;
+                </button>
+                <button className="swiper-button-next" onClick={handleNext}>
+                  &#10095;
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
 
         <div className="challenges__container">
           <h3 className="pd-headline pd-fifty-fifty-text-image__heading">
