@@ -160,6 +160,9 @@
       "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/sx0brbekitjxrwqac2wv",
       "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/fk1jeqj5qwtnedmzbfjl"
     ],
+    "screenshots_grid": [
+      "https://res.cloudinary.com/dfl9wcmy4/video/upload/v1728501916/my%20portfolio/osm9xdfezyjglhb10z55.mp4"
+    ],
     "techstack": ["React", "Node.js", "Express", "socket.io", "MongoDB"],
     "techstackIntro": "Harnessing advanced technology for a seamless document editing experience with autosave.",
     "details": [
@@ -170,9 +173,8 @@
     "link": null,
     "githublink": "https://github.com/sarthakc20/Autosave-Doc-Editor",
     "challenges": [
-      "Implementing real-time collaboration with minimal latency.",
-      "Ensuring data consistency across multiple users editing the same document.",
-      "Handling autosave functionality efficiently without overwhelming the server."
+      "Implementing real-time collaboration with minimal latency. Real-time updates need to be instantly reflected across all users, requiring efficient synchronization and WebSocket optimization to minimize lag, even in the presence of high network latency.",
+      "Ensuring data consistency across multiple users editing the same document. Multiple users editing simultaneously can lead to conflicts, so consistency models like Operational Transformation (OT) must be implemented to ensure all users see the same version of the document."
     ],
     "solution": "Used socket.io to manage real-time data exchange and updates between multiple users. Implemented autosave using debouncing techniques to prevent excessive server load.",
     "result": "Real-time collaboration and autosave worked smoothly, allowing multiple users to edit documents simultaneously without data loss."
@@ -204,11 +206,10 @@
     "link": "https://sarthakc20.github.io/SarthakToDo/",
     "githublink": "https://github.com/sarthakc20/SarthakToDo",
     "challenges": [
-      "Implementing drag-and-drop functionality for task prioritization.",
-      "Managing user sessions and task data securely.",
-      "Ensuring a seamless experience across devices and browsers."
+      "Ensuring all tasks can be marked as completed or uncompleted in one action, while maintaining data consistency in the UI and accurately updating local storage. So that tasks can be marked as completed and uncompleted accordingly",
+      "Creating an efficient filtering mechanism that dynamically updates the task list view based on the selected filter. While preserving task status and syncing data with local storage."
     ],
-    "solution": "Implemented drag-and-drop using `react-beautiful-dnd`. Used JWT for secure user authentication and MongoDB to store task data, ensuring efficient data retrieval.",
-    "result": "The app provided a user-friendly task management interface, with smooth drag-and-drop functionality and secure user sessions across devices."
+    "solution": "Implemented a Tick button that marks tasks as completed or uncompleted, updating both the task list and local storage. Added a filter to display tasks based on their status (All, Completed, Uncompleted), ensuring the UI updates dynamically while syncing with local storage.",
+    "result": "The app provided a user-friendly task management interface, with smooth functionalities"
   }
 ]
