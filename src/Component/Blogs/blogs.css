@@ -3,7 +3,7 @@
 }
 
 .blog_section {
-  padding: 0 70px;
+  padding: 0 80px;
 }
 
 .blog-card {
@@ -12,17 +12,21 @@
   margin-bottom: 50px;
 }
 
+.blog-cover-image {
+  flex: 3;
+}
+
 .blog-image {
-  width: 45%;
-  height: 41vh;
+  width: 100%;
+  height: auto;
   object-fit: fill;
   border-radius: 8px;
   margin-top: 21px;
 }
 
 .blog-content {
+  flex: 2;
   padding: 20px;
-  width: 55%;
 }
 
 .blog-button {

@@ -35,11 +35,13 @@ const Blogs = () => {
         <div className="blog_section">
           {blogsData.map((blog, index) => (
             <div key={index} className="blog-card exp-text-box">
+              <div className="blog-cover-image">
               <img
                 src={blog.cover_image}
                 alt={blog.title}
                 className="blog-image"
               />
+              </div>
               <div className="blog-content">
                 <h2>{blog.title}</h2>
                 <small>
