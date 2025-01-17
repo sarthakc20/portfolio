@@ -6,7 +6,8 @@
     "technologies": ["HTML", "CSS", "JavaScript", "Liquid"],
     "tasks": [
       "Developed and rebranded the frontend of Shopify stores according to client specifications using HTML, CSS, and JavaScript.",
-      "Implemented custom features and functionalities using Shopify's Liquid templating language.",
+      "Implemented custom features and functionalities using Shopify's Liquid templating language and Shopify Ajax API to enhance store interactivity and user experience.",
+      "Integrated third-party apps into Shopify stores to extend functionality.",
       "Managed version control and collaboration workflows using Git and GitHub, including branching strategies for efficient development and deployment."
     ],
     "image": "tm.webp",
