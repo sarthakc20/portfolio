@@ -9,6 +9,7 @@ import Emarket from "../../assets/emarket.png";
 import Netflix from "../../assets/netflix.png";
 import Doc from "../../assets/doc.png";
 import Todo from "../../assets/todo.png";
+import { MdArrowForward } from "react-icons/md";
 
 // Mapping of image filenames to imported images
 const imageMap = {
@@ -78,14 +79,19 @@ const Projects = () => {
                   ref={(el) => (projectRef.current[index] = el)}
                 >
                   <NavLink
-                    to={`/projects/${project.title.toLowerCase().replace(/ /g, "-")}/${project.id}`}
+                    to={`/projects/${project.title
+                      .toLowerCase()
+                      .replace(/ /g, "-")}/${project.id}`}
                     className="project_card_image"
                   >
                     <div className="project_card-content">
                       <div>
                         <div className="text-size-medium">{project.title}</div>
                         <div className="text-size-small">
-                          {project.description}
+                          {project.description}{" "}
+                          <span>
+                            Know more {"        "} <MdArrowForward className="btn-icon" />
+                          </span>
                         </div>
                       </div>
                     </div>
