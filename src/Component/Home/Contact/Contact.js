@@ -31,7 +31,7 @@ const Contact = () => {
     };
   }, []);
   return (
-    <section id="contact">
+
       <div className="contact-container">
         <h2 className="title name">Contact Me</h2>
         <div className="contact-inner-container" ref={contactRef}>
@@ -68,7 +68,6 @@ const Contact = () => {
         </p>
         </div>
       </div>
-    </section>
   );
 };
 

@@ -5,6 +5,7 @@ import { MdMail, MdOutlineFileDownload } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 import Skills from "./Skills/Skills.js";
 import Contact from "./Contact/Contact.js";
+import Testimonials from "./Testimonials/Testimonials.js";
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -96,6 +97,10 @@ const Home = () => {
           </div>
         </div>
       )}
+
+      <section id="testimonials">
+        <Testimonials />
+      </section>
 
       <section id="contact">
         <Contact />
