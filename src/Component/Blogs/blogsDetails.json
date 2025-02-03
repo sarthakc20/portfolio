@@ -14,6 +14,14 @@
       "topic": ["Shopify", "Liquid", "Template language"],
       "posted_on": "Aug 30, 2024",
       "blog_link": "https://dev.to/sarthakc20/what-is-liquid-shopify--eg4"
+    },
+    {
+      "title": "ReactJS Performance Optimization: Best Practices",
+      "cover_image": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7ckgtngep5bdieqh3rlq.png",
+      "blog_description": "In today’s fast-paced digital world, users expect websites and applications to be lightning-fast and highly responsive. For developers working with ReactJS, ensuring optimal performance is crucial to providing a seamless user experience. In this blog, we’ll explore simple yet effective strategies to boost the performance of your ReactJS applications. Whether you’re a beginner or a seasoned developer, these tips will help you write cleaner, faster, and more efficient React code. Let’s dive in!",
+      "topic": ["lazyloading", "useMemmo", "useCallback"],
+      "posted_on": "Feb 3, 2025",
+      "blog_link": "https://dev.to/sarthakc20/reactjs-performance-optimization-best-practices-jjn"
     }
   ]
   
