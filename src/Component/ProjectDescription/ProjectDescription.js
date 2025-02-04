@@ -12,6 +12,7 @@ const ProjectDescription = () => {
   const [loading, setLoading] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
   const swiperRef = useRef(null);
+  const [imageLoadStatus, setImageLoadStatus] = useState([false, false, false]);
 
   useEffect(() => {
     import("../Projects/projectsData.json")
@@ -47,6 +48,14 @@ const ProjectDescription = () => {
     setCurrentSlide((prevSlide) =>
       prevSlide === 0 ? project.screenshots_slide.length - 1 : prevSlide - 1
     );
+  };
+
+  const handleImageLoad = (index) => {
+    setImageLoadStatus((prevStatus) => {
+      const updatedStatus = [...prevStatus];
+      updatedStatus[index] = true;
+      return updatedStatus;
+    });
   };
 
   const sections = [
@@ -147,11 +156,17 @@ const ProjectDescription = () => {
                   )}
                 </div>
                 <div className="pd-fifty-fifty-text-image__image-wrapper">
+                  {!imageLoadStatus[index] && (
+                    <div className="skeleton-loader" />
+                  )}
                   <img
-                    className="pd-fifty-fifty-text-image__image"
+                    className={`pd-fifty-fifty-text-image__image ${
+                      !imageLoadStatus[index] ? "hidden" : ""
+                    }`}
                     src={project.screenshots[index] || project.screenshots[0]}
                     alt={`${section.title} of ${project.title}`}
-                    loading="lazy" // Lazy load the image
+                    loading="lazy"
+                    onLoad={() => handleImageLoad(index)}
                   />
                 </div>
               </div>
