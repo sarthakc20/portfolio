@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./home.css";
-import resume from "../../assets/Sarthak-Chatterjee Resume.pdf";
+import resume from "../../assets/Sarthak-Chatterjee-Resume.pdf";
 import { MdMail, MdOutlineFileDownload } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 import Skills from "./Skills/Skills.js";
