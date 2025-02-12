@@ -20,6 +20,22 @@ const Home = () => {
 
   const profilePic = "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/zje1qybdxdxxwenhnokh";
 
+  // Dynamically calculate age
+  const calculateAge = (birthYear, birthMonth, birthDay) => {
+    const today = new Date();
+    let age = today.getFullYear() - birthYear;
+    
+    // Check if birthday has occurred this year
+    if (
+      today.getMonth() < birthMonth - 1 || 
+      (today.getMonth() === birthMonth - 1 && today.getDate() < birthDay)
+    ) {
+      age--;
+    }
+  
+    return age;
+  };
+
   return (
     <>
       <section id="profile">
@@ -28,7 +44,7 @@ const Home = () => {
         </div>
         <div className="section__text">
           <p className="section__text__p1">
-            I am a 23 years old Software Engineer. Currently, I am working at{" "}
+            I am a {calculateAge(2000, 11, 20)} years old Software Engineer. Currently, I am working at{" "}
             <span>Tech Mahindra</span> as an Associate Software Engineer. My
             expertise is in Full Stack Development. As a MERN stack developer
             with a strong passion for creating dynamic and efficient web

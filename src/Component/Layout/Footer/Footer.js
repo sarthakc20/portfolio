@@ -32,7 +32,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer-copy">
-          &copy; Sarthak Chatterjee 2024
+          &copy; Sarthak Chatterjee {new Date().getFullYear()}
         </div>
       </div>
     </footer>
