@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "../../Layout/Loader/Loader";
 import "./testimonials.css";
@@ -7,8 +7,8 @@ import { MdArrowForward, MdArrowOutward } from "react-icons/md";
 const Testimonials = ({ limit }) => {
   const [testimonialData, setTestimonialData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const testimonialsRef = useRef(null);
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
+  const cardsRef = useRef([]);
 
   useEffect(() => {
     import("./testimonialDetails.json")
@@ -20,35 +20,36 @@ const Testimonials = ({ limit }) => {
         console.error("Error loading JSON data:", error);
         setLoading(false);
       });
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("appear");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (testimonialsRef.current) {
-      observer.observe(testimonialsRef.current);
-    }
-
-    return () => {
-      if (testimonialsRef.current) {
-        observer.unobserve(testimonialsRef.current);
-      }
-    };
   }, []);
+
+  useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("appear");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+  
+      cardsRef.current.forEach((item) => {
+        if (item) observer.observe(item);
+      });
+  
+      return () => {
+        cardsRef.current.forEach((item) => {
+          if (item) observer.unobserve(item);
+        });
+      };
+    }, [testimonialData]);
 
   if (loading) {
     return <Loader />;
   }
 
-  // Limit the number of testimonials displayed
   const displayedTestimonials = limit
     ? testimonialData.slice(0, limit)
     : testimonialData;
@@ -58,9 +59,13 @@ const Testimonials = ({ limit }) => {
       <div className="exp-title">
         <h1 className="title name skill-title">Testimonials</h1>
       </div>
-      <div className="testimonials_section" ref={testimonialsRef}>
+      <div className="testimonials_section">
         {displayedTestimonials.map((testimonial, index) => (
-          <div key={index} className="testimonial-card exp-text-box">
+          <div
+            key={index}
+            className="testimonial-card exp-text-box"
+            ref={(el) => (cardsRef.current[index] = el)}
+          >
             <div>
               <p
                 className="testimonial-text"
@@ -80,12 +85,12 @@ const Testimonials = ({ limit }) => {
         ))}
       </div>
 
-      {/* Show "See More" button only if limited testimonials are displayed */}
       {limit && testimonialData.length > limit && (
         <div className="see-more-container">
           <button
             className="btn btn-color-1"
             onClick={() => navigate("/testimonials")}
+            
           >
             See More <MdArrowForward className="btn-icon" />
           </button>
