@@ -1,27 +1,28 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Loader from "../../Layout/Loader/Loader";
 import "./testimonials.css";
-import { MdArrowOutward } from "react-icons/md";
+import { MdArrowForward, MdArrowOutward } from "react-icons/md";
 
-const Testimonials = () => {
+const Testimonials = ({ limit }) => {
   const [testimonialData, setTestimonialData] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const testimonialsRef = useRef(null);
+  const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
     import("./testimonialDetails.json")
       .then((data) => {
         setTestimonialData(data.default);
-        setLoading(false); // Hide loader when data is ready
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error loading JSON data:", error);
-        setLoading(false); // Hide loader even if there's an error
+        setLoading(false);
       });
 
     const observer = new IntersectionObserver(
-      (entries, obs) => {
+      (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("appear");
@@ -32,32 +33,37 @@ const Testimonials = () => {
       { threshold: 0.1 }
     );
 
-    const currenttestimonialsRef = testimonialsRef.current;
-    if (currenttestimonialsRef) {
-      observer.observe(currenttestimonialsRef);
+    if (testimonialsRef.current) {
+      observer.observe(testimonialsRef.current);
     }
 
     return () => {
-      if (currenttestimonialsRef) {
-        observer.unobserve(currenttestimonialsRef);
+      if (testimonialsRef.current) {
+        observer.unobserve(testimonialsRef.current);
       }
     };
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
+
+  // Limit the number of testimonials displayed
+  const displayedTestimonials = limit
+    ? testimonialData.slice(0, limit)
+    : testimonialData;
+
   return (
     <>
-      {loading && <Loader />}
       <div className="exp-title">
         <h1 className="title name skill-title">Testimonials</h1>
       </div>
       <div className="testimonials_section" ref={testimonialsRef}>
-        {testimonialData.map((testimonial, index) => (
+        {displayedTestimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-card exp-text-box">
             <div>
-              <p className="testimonial-text"
+              <p
+                className="testimonial-text"
                 dangerouslySetInnerHTML={{ __html: testimonial.testimonial }}
               />
             </div>
@@ -73,6 +79,18 @@ const Testimonials = () => {
           </div>
         ))}
       </div>
+
+      {/* Show "See More" button only if limited testimonials are displayed */}
+      {limit && testimonialData.length > limit && (
+        <div className="see-more-container">
+          <button
+            className="btn btn-color-1"
+            onClick={() => navigate("/testimonials")}
+          >
+            See More <MdArrowForward className="btn-icon" />
+          </button>
+        </div>
+      )}
     </>
   );
 };

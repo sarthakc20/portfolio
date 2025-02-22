@@ -18,6 +18,13 @@
   color: rgb(6, 46, 111);
 }
 
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+
 @media (max-width: 768px) {
   .testimonial-text {
     text-align: center;

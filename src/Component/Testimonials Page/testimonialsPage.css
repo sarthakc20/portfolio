@@ -1,0 +1,9 @@
+.testimonials {
+  padding: 2vmax 6vmax;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 2vmax 2vmax;
+  }
+}

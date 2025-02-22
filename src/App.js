@@ -10,6 +10,7 @@ import NotFound from "./Component/Layout/Not Found/NotFound.js";
 import Experience from "./Component/Experience/Experience.js";
 import Projects from "./Component/Projects/Projects.js";
 import Blogs from "./Component/Blogs/Blogs.js";
+import TestimonialsPage from "./Component/Testimonials Page/TestimonialsPage.js";
 import ProjectDescription from "./Component/ProjectDescription/ProjectDescription.js";
 
 function App() {
@@ -30,8 +31,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:title/:projectId" element={<ProjectDescription />} />
+        <Route
+          path="/projects/:title/:projectId"
+          element={<ProjectDescription />}
+        />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
