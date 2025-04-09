@@ -117,7 +117,7 @@ const Home = () => {
       )}
 
       <section id="testimonials">
-        <Testimonials limit={6} />
+        <Testimonials limit={4} />
       </section>
 
       <section id="contact">
