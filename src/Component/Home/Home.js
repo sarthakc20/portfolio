@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./home.css";
-import resume from "../../assets/Sarthak-Chatterjee-Resume.pdf";
+import resume from "../../assets/Sarthak-Chatterjee-Resume-.pdf";
 import { MdMail, MdOutlineFileDownload } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 import Skills from "./Skills/Skills.js";
@@ -47,11 +47,11 @@ const Home = () => {
           <p className="section__text__p1">
             I am a {calculateAge(2000, 11, 20)} years old Software Engineer.
             Currently, I am working at <span>Tech Mahindra</span> as an
-            Associate Software Engineer. My expertise is in Full Stack
-            Development. As a MERN stack developer with a strong passion for
-            creating dynamic and efficient web applications, I am really excited
-            to share my skills, projects and experiences. Hello, welcome to my
-            space. I'm
+            Associate Software Engineer. My expertise spans Frontend Development
+            and Shopify Development. As a developer with strong experience in
+            building dynamic and efficient web applications, I am passionate
+            about creating seamless user experiences. I'm excited to share my
+            skills, projects, and experiences. Hello, welcome to my space. I'm
           </p>
           <h1 className="title name">Sarthak Chatterjee</h1>
           <p className="section__text__p2">Software Engineer</p>

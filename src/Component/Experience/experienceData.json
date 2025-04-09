@@ -3,7 +3,7 @@
     "company": "Tech Mahindra",
     "designation": "Associate Software Engineer",
     "duration": "Mar 2024 - Present",
-    "technologies": ["HTML", "CSS", "JavaScript", "Liquid"],
+    "technologies": ["HTML", "CSS", "JavaScript", "Liquid", "Node.js"],
     "tasks": [
       "Developed and rebranded the frontend of Shopify stores according to client specifications using HTML, CSS, and JavaScript.",
       "Implemented custom features and functionalities using Shopify's Liquid templating language and Shopify Ajax API to enhance store interactivity and user experience. Additionally, performed data migration and developed extensions using Node.js and React.js.",
