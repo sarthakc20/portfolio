@@ -25,7 +25,7 @@
     },
     {
       "title": "Best Practices for Component Reusability in Large React Projects",
-      "cover_image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1745090020/my%20portfolio/dimlnwinwnxqo3qebdov.png",
+      "cover_image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1745090884/my%20portfolio/eovtr3zalizpxckwskw8.webp",
       "blog_description": "Component reusability is one of the core strengths of React, but as projects grow in size, managing reusable components effectively becomes more challenging. In this blog post, we'll start with the basics and gradually dive into advanced strategies, using real-life examples and large-scale implementation tips.",
       "topic": ["react", "frontend"],
       "posted_on": "April 15, 2025",
