@@ -143,6 +143,29 @@
   border-radius: 2rem;
 }
 
+.tech-stack-icons {
+  position: absolute;
+  bottom: 990%;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  background: #8080808f;
+  border-radius: 40px;
+}
+
+.tech-icon {
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  padding: 3px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin-left: -10px; /* Overlap each icon */
+  z-index: 1;
+}
+
 /* Mobile View Styles */
 
 @media (max-width: 767px) {

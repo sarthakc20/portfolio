@@ -26,6 +26,15 @@ const Projects = () => {
   const [imageLoaded, setImageLoaded] = useState({}); // Track loaded images
   const projectRef = useRef([]);
 
+  const importIcon = (filename) => {
+    try {
+      return require(`../../assets/${filename}`);
+    } catch (e) {
+      console.warn(`Missing icon: ${filename}`);
+      return null;
+    }
+  };
+
   useEffect(() => {
     import("./projectsData.json")
       .then((data) => {
@@ -113,6 +122,27 @@ const Projects = () => {
                             Know more <MdArrowForward className="btn-icon" />
                           </span>
                         </div>
+                        {project.techStackIcons && (
+                          <div className="tech-stack-icons">
+                            {project.techStackIcons.map((icon, i) => {
+                              const iconSrc = importIcon(icon);
+                              return (
+                                iconSrc && (
+                                  <img
+                                    key={i}
+                                    src={iconSrc}
+                                    alt={icon.replace(".png", "")}
+                                    className="tech-icon"
+                                    style={{
+                                      zIndex: i,
+                                      marginLeft: i === 0 ? 0 : "-10px",
+                                    }}
+                                  />
+                                )
+                              );
+                            })}
+                          </div>
+                        )}
                       </div>
                     </div>
                   </NavLink>
