@@ -113,38 +113,43 @@ const Projects = () => {
                       onLoad={() => handleImageLoad(index)}
                     />
 
-                    <div className="project_card-content">
-                      <div>
-                        <div className="text-size-medium">{project.title}</div>
-                        <div className="text-size-small">
-                          {project.description}{" "}
-                          <span>
-                            Know more <MdArrowForward className="btn-icon" />
-                          </span>
-                        </div>
-                        {project.techStackIcons && (
-                          <div className="tech-stack-icons">
-                            {project.techStackIcons.map((icon, i) => {
-                              const iconSrc = importIcon(icon);
-                              return (
-                                iconSrc && (
-                                  <img
-                                    key={i}
-                                    src={iconSrc}
-                                    alt={icon.replace(".png", "")}
-                                    className="tech-icon"
-                                    style={{
-                                      zIndex: i,
-                                      marginLeft: i === 0 ? 0 : "-10px",
-                                    }}
-                                  />
-                                )
-                              );
-                            })}
+                    {imageLoaded[index] && (
+                      <div className="project_card-content">
+                        <div>
+                          <div className="text-size-medium">
+                            {project.title}
                           </div>
-                        )}
+                          <div className="text-size-small">
+                            {project.description}{" "}
+                            <span>
+                              Know more <MdArrowForward className="btn-icon" />
+                            </span>
+                          </div>
+                          {project.techStackIcons && (
+                            <div className="tech-stack-icons">
+                              {project.techStackIcons.map((icon, i) => {
+                                const iconSrc = importIcon(icon);
+                                return (
+                                  iconSrc && (
+                                    <img
+                                      key={i}
+                                      src={iconSrc}
+                                      alt={icon.replace(".png", "")}
+                                      className="tech-icon"
+                                      style={{
+                                        zIndex:
+                                          project.techStackIcons.length - i,
+                                        marginLeft: i === 0 ? 0 : "-10px",
+                                      }}
+                                    />
+                                  )
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </NavLink>
                 </div>
               ))}
