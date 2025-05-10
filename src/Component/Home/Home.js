@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <>
-      <section id="profile">
+      <section id="profile" className="max-width">
         <div className="section__pic-container">
           <img src={profilePic} alt="Sarthak Chatterjee profile picture" />
         </div>
@@ -84,7 +84,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="skills">
+      <section id="skills" className="max-width">
         <Skills />
       </section>
 
@@ -118,11 +118,11 @@ const Home = () => {
         </div>
       )}
 
-      <section id="testimonials">
+      <section id="testimonials" className="max-width">
         <Testimonials limit={4} />
       </section>
 
-      <section id="contact">
+      <section id="contact" className="max-width">
         <Contact />
       </section>
     </>

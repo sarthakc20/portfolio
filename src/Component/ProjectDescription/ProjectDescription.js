@@ -176,7 +176,7 @@ const ProjectDescription = () => {
       </div>
 
       <div className="project-description-block2">
-        <div className="challenges__container">
+        <div className="challenges__container max-width">
           <h3 className="pd-headline pd-fifty-fifty-text-image__heading">
             Challenges
           </h3>
@@ -198,7 +198,7 @@ const ProjectDescription = () => {
         </div>
 
         {project.screenshots_grid && project.screenshots_grid.length > 0 ? (
-          <div className="grid-gallery">
+          <div className="grid-gallery max-width">
             {/* Check if the first item is a video by its file extension */}
             {project.screenshots_grid[0].endsWith(".mp4") ? (
               <div className="grid-gallery__full-imag">
@@ -241,7 +241,7 @@ const ProjectDescription = () => {
           <></>
         )}
 
-        <div className="challenges__container">
+        <div className="challenges__container max-width">
           <h3 className="pd-headline pd-fifty-fifty-text-image__heading">
             Solution
           </h3>
@@ -250,7 +250,7 @@ const ProjectDescription = () => {
           </p>
         </div>
 
-        <div className="custom-swiper-container">
+        <div className="custom-swiper-container max-width">
           {project.screenshots_slide && (
             <div className="custom-swiper">
               <div className="carousel-container" ref={swiperRef}>
@@ -284,7 +284,7 @@ const ProjectDescription = () => {
           )}
         </div>
 
-        <div className="challenges__container">
+        <div className="challenges__container max-width">
           <h3 className="pd-headline pd-fifty-fifty-text-image__heading">
             Result
           </h3>

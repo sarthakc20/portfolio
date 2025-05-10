@@ -28,7 +28,7 @@ const Blogs = () => {
   return (
     <>
       {loading && <Loader />}
-      <div className="blogs">
+      <div className="blogs max-width">
         <div className="exp-title">
           <h1 className="title name">Blogs</h1>
         </div>

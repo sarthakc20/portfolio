@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer max-width">
       <div className="footer-line"></div>
       <div className="footer-content">
         <div className="footer-socials">

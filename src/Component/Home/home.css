@@ -1,6 +1,5 @@
 section {
   padding-top: 7vh;
-  /* height: 1000vh; */
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -14,7 +13,6 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
   margin-bottom: 2.5vmax;
 }
 
@@ -227,17 +225,14 @@ section {
 }
 
 .social-links a:hover {
-  color: #333333b0; 
+  color: #333333b0;
 }
 
 #contact {
   padding: 2rem 0;
   text-align: center;
-  margin: 2rem 5%;
+  margin: 2rem auto;
 }
-
-
-
 
 /* Media Queries */
 
@@ -257,7 +252,6 @@ section {
 }
 
 @media screen and (max-width: 1200px) {
-
   #profile {
     padding-top: 12vh;
     height: 70vh;
@@ -311,5 +305,11 @@ section {
   }
   .section__text {
     padding-top: 2vh;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #profile {
+    padding-top: 15vh;
   }
 }

@@ -4,7 +4,7 @@ import Testimonials from "../Home/Testimonials/Testimonials";
 
 function TestimonialsPage() {
   return (
-    <div className="testimonials">
+    <div className="testimonials max-width">
       <Testimonials />
     </div>
   );

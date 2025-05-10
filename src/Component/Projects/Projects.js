@@ -79,7 +79,7 @@ const Projects = () => {
     <>
       {loading && <Loader />}
 
-      <div className="project">
+      <div className="project max-width">
         <div className="exp-title">
           <h1 className="title name">Projects</h1>
         </div>

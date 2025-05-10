@@ -5,3 +5,13 @@
   box-sizing: border-box;
   /* background-color: rgb(248, 250, 253); */
 }
+
+.max-width {
+  max-width: 1440px;
+}
+
+@media screen and (min-width: 1920px) {
+  .max-width {
+    margin: auto;
+  }
+}
