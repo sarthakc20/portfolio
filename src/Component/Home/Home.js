@@ -46,7 +46,7 @@ const Home = () => {
         <div className="section__text">
           <p className="section__text__p1">
             I am a {calculateAge(2000, 11, 20)} years old Software Engineer
-            currently working at Tech Mahindra as an Associate Software
+            currently working at <span>Tech Mahindra</span> as an Associate Software
             Engineer. My expertise lies in Frontend Development and Shopify
             Development, with a strong focus on building high-performance,
             scalable web applications. I am passionate about crafting seamless
