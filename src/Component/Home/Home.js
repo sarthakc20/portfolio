@@ -45,7 +45,7 @@ const Home = () => {
         </div>
         <div className="section__text">
           <p className="section__text__p1">
-            I am a {calculateAge(2000, 11, 20)} years old <span>Software Engineer</span>  
+            I am a <span>Software Engineer </span>  
             with around 2 years of experience in
             developing scalable and performant eCommerce solutions. Skilled in React, Redux,
             and Node.js, I specialize in building responsive, user-centric web applications
