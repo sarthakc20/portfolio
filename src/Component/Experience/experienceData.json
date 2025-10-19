@@ -3,15 +3,12 @@
     "company": "Ecom Experts",
     "designation": "Frontend developer",
     "duration": "Aug 2025 - Present",
-    "technologies": ["HTML", "CSS", "JavaScript", "Liquid", "Node.js"],
+    "technologies": ["React", "JavaScript", "HTML", "CSS", "Liquid", "Node.js"],
     "tasks": [
-      "Developed and rebranded the frontend of Shopify stores according to client specifications using HTML, CSS, and JavaScript.",
-      "Implemented custom features and functionalities using Shopify's Liquid templating language and Shopify Ajax API to enhance store interactivity and user experience. Additionally, performed data migration and developed extensions using Node.js and React.js.",
-      "Integrated third-party apps into Shopify stores to extend functionality.",
-      "Managed version control and collaboration workflows using Git and GitHub, including branching strategies for efficient development and deployment.",
-      "Debugged and troubleshooted technical issues to ensure optimal functionality",
-      "Optimized development workflows, reducing iteration cycles and improving efficiency in project delivery.",
-      "Collaborated within Agile teams, working in sprints, and effectively used Jira for planning, tracking, and managing development tasks."
+      "Created new features and implemented a pixel-perfect redesign following best design practices using React, HTML, CSS, JavaScript, and Liquid.",
+      "Implemented a backorder functionality for international B2B customers, ensuring domestic customers remain ineligible based on business rules and regional logic.",
+      "Developed checkout extension to display product recommendations on the checkout page, enhancing user experience and upsell opportunities using React.js.",
+      "Implemented GTM and Google Analytics, and developed custom tracking pixels to monitor and analyze customer interactions and event data, improving data accuracy and marketing attribution by 40%."
     ],
     "image": "shopifyexperts_logo.jpeg",
     "alttext": "Ecom Experts logo"
