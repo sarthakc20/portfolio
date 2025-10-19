@@ -45,14 +45,13 @@ const Home = () => {
         </div>
         <div className="section__text">
           <p className="section__text__p1">
-            I am a {calculateAge(2000, 11, 20)} years old Software Engineer
-            currently working at <span>Tech Mahindra</span> as an Associate Software
-            Engineer. My expertise lies in Frontend Development and Shopify
-            Development, with a strong focus on building high-performance,
-            scalable web applications. I am passionate about crafting seamless
-            and engaging UX, and I bring solid experience in
-            developing dynamic, efficient solutions across various platforms.
-            I'm excited to share my skills, projects, and professional journey.
+            I am a {calculateAge(2000, 11, 20)} years old <span>Software Engineer</span>  
+            with around 2 years of experience in
+            developing scalable and performant eCommerce solutions. Skilled in React, Redux,
+            and Node.js, I specialize in building responsive, user-centric web applications
+            with a strong focus on clean, maintainable, and optimized code. Passionate about
+            creating seamless user experiences and crafting efficient UI architectures, I
+            constantly strive to blend performance with elegant design.
             Hello, welcome to my space. I'm
           </p>
           <h1 className="title name">Sarthak Chatterjee</h1>
