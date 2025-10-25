@@ -10,21 +10,22 @@ import reduxIcon from "../../../assets/redux.png";
 import mongodbIcon from "../../../assets/mongodb.svg";
 import sqlIcon from "../../../assets/sql.png";
 import javaIcon from "../../../assets/java.png";
-import cppIcon from "../../../assets/cpp.png";
 import shopify from "../../../assets/shopify.webp";
+import typescript from "../../../assets/Typescript.svg.png";
+import postgresql from "../../../assets/Postgresql_elephant.svg.png";
 
 const skills = [
   { name: "HTML", icon: htmlIcon },
   { name: "CSS", icon: cssIcon },
   { name: "JavaScript", icon: jsIcon },
+  { name: "TypeScript", icon: typescript },
   { name: "React.js", icon: reactIcon },
   { name: "Node.js", icon: nodeIcon },
   { name: "Express", icon: expressIcon },
   { name: "Redux", icon: reduxIcon },
   { name: "MongoDB", icon: mongodbIcon },
-  { name: "SQL", icon: sqlIcon },
+  { name: "PostgreSQL", icon: postgresql },
   { name: "Java", icon: javaIcon },
-  { name: "C++", icon: cppIcon },
   { name: "Shopify", icon: shopify },
 ];
 
