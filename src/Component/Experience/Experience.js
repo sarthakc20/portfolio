@@ -4,12 +4,14 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { FaCircleChevronRight } from "react-icons/fa6";
 import TM from "../../assets/tm.webp";
 import INEURON from "../../assets/ineuron.jpg";
+import ECOMEXPERTS from "../../assets/shopifyexperts_logo.jpeg";
 import Loader from "../Layout/Loader/Loader.js";
 
 // Mapping of image filenames to imported images
 const imageMap = {
   "tm.webp": TM,
-  "ineuron.jpg": INEURON
+  "ineuron.jpg": INEURON,
+  "shopifyexperts_logo.jpeg": ECOMEXPERTS
 };
 
 const Experience = () => {
