@@ -8,7 +8,6 @@ import nodeIcon from "../../../assets/node.webp";
 import expressIcon from "../../../assets/express.png";
 import reduxIcon from "../../../assets/redux.png";
 import mongodbIcon from "../../../assets/mongodb.svg";
-import sqlIcon from "../../../assets/sql.png";
 import javaIcon from "../../../assets/java.png";
 import shopify from "../../../assets/shopify.webp";
 import typescript from "../../../assets/Typescript.svg.png";
