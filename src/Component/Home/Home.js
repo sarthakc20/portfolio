@@ -22,20 +22,20 @@ const Home = () => {
     "https://res.cloudinary.com/dfl9wcmy4/image/upload/f_auto,q_auto/v1/my%20portfolio/zje1qybdxdxxwenhnokh";
 
   // Dynamically calculate age
-  const calculateAge = (birthYear, birthMonth, birthDay) => {
-    const today = new Date();
-    let age = today.getFullYear() - birthYear;
+  // const calculateAge = (birthYear, birthMonth, birthDay) => {
+  //   const today = new Date();
+  //   let age = today.getFullYear() - birthYear;
 
-    // Check if birthday has occurred this year
-    if (
-      today.getMonth() < birthMonth - 1 ||
-      (today.getMonth() === birthMonth - 1 && today.getDate() < birthDay)
-    ) {
-      age--;
-    }
+  //   // Check if birthday has occurred this year
+  //   if (
+  //     today.getMonth() < birthMonth - 1 ||
+  //     (today.getMonth() === birthMonth - 1 && today.getDate() < birthDay)
+  //   ) {
+  //     age--;
+  //   }
 
-    return age;
-  };
+  //   return age;
+  // };
 
   return (
     <>
