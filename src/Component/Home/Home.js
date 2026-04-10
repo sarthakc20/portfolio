@@ -31,8 +31,8 @@ const Home = () => {
           <p className="section__text__p1">
             I am a <span>Software Engineer </span>  
             with 2+ years of experience in
-            developing scalable and performant eCommerce solutions. Skilled in React, Redux, Node.js, JavaScript, Typescript, Shopify, I specialize in building responsive, user-centric and scalable applications
-            with a strong focus on clean, maintainable, and optimized code. Leveraging AI-driven approaches to optimize development speed and elevate quality, I build efficient UI architectures.
+            developing scalable and high performant eCommerce solutions. Skilled in React, Redux, Node.js, JavaScript, Typescript, Shopify, I specialize in building responsive, user-centric and scalable applications
+            with a strong focus on clean, maintainable, and optimized code. Leveraging AI-driven approaches to optimize development speed and elevate quality.
             Hello, welcome to my space. I'm
           </p>
           <h1 className="title name">Sarthak Chatterjee</h1>
