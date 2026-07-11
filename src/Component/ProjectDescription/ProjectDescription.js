@@ -1,18 +1,28 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./projectDescription.css";
-import Loader from "../Layout/Loader/Loader.js";
+import ImageWithSkeleton from "./ImageWithSkeleton.js";
 import { FaCircleChevronRight } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
+
+const SLIDE_GAP = 16;
+const PEEK_RATIO = 0.25;
 
 const ProjectDescription = () => {
   const { projectId } = useParams();
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const swiperRef = useRef(null);
-  const [imageLoadStatus, setImageLoadStatus] = useState([false, false, false]);
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [enableTransition, setEnableTransition] = useState(true);
+  const [viewportWidth, setViewportWidth] = useState(0);
+  const carouselRef = useRef(null);
+
+  const slides = project?.screenshots_slide ?? [];
+  const loopSlides =
+    slides.length > 1
+      ? [slides[slides.length - 1], ...slides, slides[0]]
+      : slides;
 
   useEffect(() => {
     import("../Projects/projectsData.json")
@@ -30,32 +40,73 @@ const ProjectDescription = () => {
       });
   }, [projectId]);
 
+  useEffect(() => {
+    setSlideIndex(slides.length > 1 ? 1 : 0);
+    setEnableTransition(true);
+  }, [projectId, slides.length]);
+
+  useEffect(() => {
+    const node = carouselRef.current;
+    if (!node) return;
+
+    const updateWidth = () => {
+      const style = window.getComputedStyle(node);
+      const paddingX =
+        parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+      setViewportWidth(node.clientWidth - paddingX);
+    };
+    updateWidth();
+
+    const resizeObserver = new ResizeObserver(updateWidth);
+    resizeObserver.observe(node);
+    return () => resizeObserver.disconnect();
+  }, [project]);
+
+  useEffect(() => {
+    if (enableTransition) return;
+
+    const frameId = requestAnimationFrame(() => {
+      requestAnimationFrame(() => setEnableTransition(true));
+    });
+
+    return () => cancelAnimationFrame(frameId);
+  }, [enableTransition, slideIndex]);
+
   if (loading) {
-    return <Loader />;
+    return null;
   }
 
   if (!project) {
     return <div>Project not found</div>;
   }
 
+  const innerWidth = Math.max(viewportWidth, 0);
+  const slideWidth =
+    slides.length > 1 ? (innerWidth - SLIDE_GAP) / (1 + PEEK_RATIO) : innerWidth;
+  const slideStride = slides.length > 1 ? slideWidth + SLIDE_GAP : innerWidth;
+
   const handleNext = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === project.screenshots_slide.length - 1 ? 0 : prevSlide + 1
-    );
+    if (slides.length <= 1) return;
+    setEnableTransition(true);
+    setSlideIndex((prev) => prev + 1);
   };
 
   const handlePrev = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? project.screenshots_slide.length - 1 : prevSlide - 1
-    );
+    if (slides.length <= 1) return;
+    setEnableTransition(true);
+    setSlideIndex((prev) => prev - 1);
   };
 
-  const handleImageLoad = (index) => {
-    setImageLoadStatus((prevStatus) => {
-      const updatedStatus = [...prevStatus];
-      updatedStatus[index] = true;
-      return updatedStatus;
-    });
+  const handleTransitionEnd = (event) => {
+    if (event.propertyName !== "transform" || slides.length <= 1) return;
+
+    if (slideIndex === loopSlides.length - 1) {
+      setEnableTransition(false);
+      setSlideIndex(1);
+    } else if (slideIndex === 0) {
+      setEnableTransition(false);
+      setSlideIndex(slides.length);
+    }
   };
 
   const sections = [
@@ -156,17 +207,10 @@ const ProjectDescription = () => {
                   )}
                 </div>
                 <div className="pd-fifty-fifty-text-image__image-wrapper">
-                  {!imageLoadStatus[index] && (
-                    <div className="skeleton-loader" />
-                  )}
-                  <img
-                    className={`pd-fifty-fifty-text-image__image ${
-                      !imageLoadStatus[index] ? "hidden" : ""
-                    }`}
+                  <ImageWithSkeleton
                     src={project.screenshots[index] || project.screenshots[0]}
                     alt={`${section.title} of ${project.title}`}
-                    loading="lazy"
-                    onLoad={() => handleImageLoad(index)}
+                    className="pd-fifty-fifty-text-image__image"
                   />
                 </div>
               </div>
@@ -211,26 +255,26 @@ const ProjectDescription = () => {
               <>
                 {/* Full-size image */}
                 <div className="grid-gallery__full-image">
-                  <img
+                  <ImageWithSkeleton
                     src={project.screenshots_grid[0]}
                     alt={`${project.title} Screenshot 1`}
-                    loading="lazy"
+                    wrapperClassName="pd-image-skeleton-wrapper--gallery-full"
                   />
                 </div>
                 {/* Two half-size images */}
                 {project.screenshots_grid.length === 3 && (
                   <div className="grid-gallery__half-images">
-                    <img
+                    <ImageWithSkeleton
                       src={project.screenshots_grid[1]}
                       alt={`${project.title} Screenshot 2`}
                       className="half-image"
-                      loading="lazy"
+                      wrapperClassName="pd-image-skeleton-wrapper--gallery-half"
                     />
-                    <img
+                    <ImageWithSkeleton
                       src={project.screenshots_grid[2]}
                       alt={`${project.title} Screenshot 3`}
                       className="half-image"
-                      loading="lazy"
+                      wrapperClassName="pd-image-skeleton-wrapper--gallery-half"
                     />
                   </div>
                 )}
@@ -251,34 +295,58 @@ const ProjectDescription = () => {
         </div>
 
         <div className="custom-swiper-container max-width">
-          {project.screenshots_slide && (
+          {slides.length > 0 && (
             <div className="custom-swiper">
-              <div className="carousel-container" ref={swiperRef}>
+              <div
+                className="carousel-container"
+                ref={carouselRef}
+                style={{
+                  "--carousel-slide-width": `${slideWidth}px`,
+                  "--carousel-slide-gap": `${SLIDE_GAP}px`,
+                }}
+              >
                 <div
                   className="swiper-wrapper"
+                  onTransitionEnd={handleTransitionEnd}
                   style={{
-                    transform: `translateX(-${currentSlide * 100}%)`,
-                    transition: "transform 0.5s ease-in-out",
+                    transform: `translateX(-${slideIndex * slideStride}px)`,
+                    transition: enableTransition
+                      ? "transform 0.5s ease-in-out"
+                      : "none",
                   }}
                 >
-                  {project.screenshots_slide.map((image, index) => (
-                    <div className="swiper-slide" key={index}>
-                      <img
+                  {loopSlides.map((image, index) => (
+                    <div className="swiper-slide" key={`carousel-slide-${index}`}>
+                      <ImageWithSkeleton
                         src={image}
-                        alt={`Screenshot ${index}`}
+                        alt={`Screenshot ${index + 1}`}
                         className="carousel-image"
+                        wrapperClassName="pd-image-skeleton-wrapper--carousel"
                       />
                     </div>
                   ))}
                 </div>
 
-                {/* Navigation buttons */}
-                <button className="swiper-button-prev" onClick={handlePrev}>
-                  &#10094;
-                </button>
-                <button className="swiper-button-next" onClick={handleNext}>
-                  &#10095;
-                </button>
+                {slides.length > 1 && (
+                  <>
+                    <button
+                      type="button"
+                      className="swiper-button-prev"
+                      onClick={handlePrev}
+                      aria-label="Previous screenshot"
+                    >
+                      &#10094;
+                    </button>
+                    <button
+                      type="button"
+                      className="swiper-button-next"
+                      onClick={handleNext}
+                      aria-label="Next screenshot"
+                    >
+                      &#10095;
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           )}

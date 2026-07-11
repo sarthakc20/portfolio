@@ -6,6 +6,7 @@ import TM from "../../assets/tm.webp";
 import INEURON from "../../assets/ineuron.jpg";
 import ECOMEXPERTS from "../../assets/shopifyexperts_logo.jpeg";
 import Loader from "../Layout/Loader/Loader.js";
+import { calculateDuration } from "./calculateDuration.js";
 
 // Mapping of image filenames to imported images
 const imageMap = {
@@ -48,7 +49,12 @@ const Experience = () => {
               <img src={imageMap[experience.image]} alt={experience.alttext} />
               <div className="exp-text-box">
                 <h2>{experience.company}</h2>
-                <p className="designation">{experience.designation}</p>
+                <div className="designation-row">
+                  <p className="designation">{experience.designation}</p>
+                  <span className="exp-duration-chip">
+                    {calculateDuration(experience.duration)}
+                  </span>
+                </div>
                 <small>
                   <FaCalendarAlt className="btn-icon" /> {experience.duration}
                 </small>

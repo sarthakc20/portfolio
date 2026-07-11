@@ -114,8 +114,29 @@
   color: rgb(94, 153, 249);
 }
 
-.exp-text-box div {
-  margin-bottom: 12px;
+.designation-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.designation-row .designation {
+  margin: 0;
+}
+
+.exp-duration-chip {
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: rgba(0, 0, 0, 0.748);
+  background: rgb(255, 255, 255);
+  border: 0.2px solid rgb(205, 222, 247);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.042);
+  border-radius: 5px;
+  display: inline-block;
+  padding: 3px 8px;
+  white-space: nowrap;
 }
 
 .exp-text-box div h3 {

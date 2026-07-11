@@ -68,7 +68,6 @@ const Home = () => {
         <Skills />
       </section>
 
-      // Contact modal
       {isModalOpen && (
         <div className="modal-overlay" onClick={toggleModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>

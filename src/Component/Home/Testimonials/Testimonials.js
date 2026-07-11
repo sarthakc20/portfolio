@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import Loader from "../../Layout/Loader/Loader";
+import TestimonialsSkeleton from "./TestimonialsSkeleton";
 import "./testimonials.css";
 import { MdArrowForward, MdArrowOutward } from "react-icons/md";
 
@@ -47,7 +47,7 @@ const Testimonials = ({ limit }) => {
     }, [testimonialData]);
 
   if (loading) {
-    return <Loader />;
+    return <TestimonialsSkeleton count={limit || 4} />;
   }
 
   const displayedTestimonials = limit

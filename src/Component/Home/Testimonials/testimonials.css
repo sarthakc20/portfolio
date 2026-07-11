@@ -36,6 +36,51 @@
   margin-top: 3rem;
 }
 
+/* Skeleton loader */
+.testimonial-skeleton-card {
+  opacity: 1;
+  transform: none;
+}
+
+.testimonial-skeleton-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.testimonial-skeleton-author {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.testimonial-skeleton-bar {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #e8eef5 25%, #f4f7fb 50%, #e8eef5 75%);
+  background-size: 200% 100%;
+  animation: testimonial-skeleton-shimmer 1.5s infinite ease-in-out;
+}
+
+.testimonial-skeleton-bar--name {
+  width: 45%;
+  height: 14px;
+}
+
+.testimonial-skeleton-bar--role {
+  width: 65%;
+  height: 10px;
+}
+
+@keyframes testimonial-skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
 
 @media (max-width: 768px) {
   .testimonial-text {

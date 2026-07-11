@@ -1,0 +1,171 @@
+[
+  {
+    "id": 201,
+    "title": "Metamark",
+    "subtitle": "Magento to Shopify Plus migration",
+    "link": "https://metamark.co.uk/",
+    "tagline": "The UK's leading manufacturer and supplier of self-adhesive sign vinyl and digital media",
+    "scope": "Complete website build redesign",
+    "collaboration": "Collaborated with Design team, CRO team, and client stakeholders for clarification and delivery alignment",
+    "platform": "Shopify Plus",
+    "highlights": [
+      "Worked on core e-commerce features including PDP rebuild with custom color selection variant drawer",
+      "Built a 4-layer mega menu bypassing Shopify's max 3-layer mega menu limitation",
+      "Provided technical approach for custom features and complex page implementations"
+    ],
+    "featureLinks": [
+      {
+        "title": "Chevron Kit Finder",
+        "url": "https://metamark.co.uk/pages/chevron"
+      },
+      {
+        "title": "ICC Colour Profiles",
+        "url": "https://metamark.co.uk/pages/icc-colour-profiles"
+      }
+    ],
+    "technologies": ["Shopify Plus", "Liquid", "JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": 202,
+    "title": "Chelsea Peers",
+    "subtitle": "Theme redesign (refresh)",
+    "link": "https://chelseapeers.com/",
+    "tagline": "A characterful loungewear brand",
+    "scope": "Complete theme redesign and refresh",
+    "platform": "Shopify Plus",
+    "highlights": [
+      "Implemented custom gifting option with gift message from product description page and cart",
+      "Enhanced store interactivity and user experience through bespoke Shopify functionality"
+    ],
+    "featureLinks": [],
+    "technologies": ["Shopify", "Liquid", "JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": 203,
+    "title": "Made by Mary",
+    "subtitle": "Headless to native commerce migration",
+    "link": "https://madebymary.com/",
+    "tagline": "A personalized jewelry brand crafting hand-stamped discs, bar necklaces, and meaningful custom pieces",
+    "scope": "Complete storefront rebuild",
+    "platform": "Shopify Plus",
+    "highlights": [
+      "Led the migration of madebymary.com from a headless architecture to a native commerce platform",
+      "Delivered a complete storefront rebuild with a fully customized product detail experience",
+      "Enabled customers to personalize their jewelry directly through bespoke PDP functionality"
+    ],
+    "featureLinks": [],
+    "technologies": ["Shopify", "Liquid", "JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": 204,
+    "title": "WOLFpak",
+    "subtitle": "Theme rebuild",
+    "link": "https://wolfpak.com/",
+    "tagline": "Gym backpacks and tactical rucksacks built for performance and everyday carry",
+    "scope": "Scalable theme architecture rebuild",
+    "platform": "Shopify Plus",
+    "highlights": [
+      "Consolidated 30+ collection templates into a single configurable template through scalable theme architecture",
+      "Significantly reduced maintenance effort while improving flexibility for content management",
+      "Set up cookie consent with full country compliance across regions"
+    ],
+    "featureLinks": [],
+    "technologies": ["Shopify", "Liquid", "JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": 205,
+    "title": "Pet Planet",
+    "subtitle": "Theme architecture rebuild",
+    "link": "https://petplanet.ca/",
+    "tagline": "Premium pet food, supplies, and grooming for happier, healthier pets across Canada",
+    "scope": "Platform migration",
+    "platform": "Shopify Plus",
+    "highlights": [
+      "Delivered a complete theme rebuild for petplanet.ca with a focus on scalable storefront architecture",
+      "Developed a Python automation script to generate URL redirect mappings for around 1 million URLs",
+      "Ensured a seamless migration while preserving SEO performance across the full redirect rollout"
+    ],
+    "featureLinks": [],
+    "technologies": ["Shopify", "Liquid", "JavaScript", "Python", "HTML", "CSS"]
+  },
+  {
+    "id": 206,
+    "title": "Mountain House",
+    "subtitle": "E-commerce optimization & custom pricing",
+    "link": "https://mountainhouse.com/",
+    "tagline": "Freeze-dried food for camping, backpacking, and emergency preparedness",
+    "scope": "Custom commerce features & storefront optimization",
+    "platform": "Shopify Plus",
+    "highlights": [
+      "Designed and developed a volume pricing and bundle offer solution with custom discount logic for accurate cart and checkout pricing",
+      "Continuously optimized storefront performance, maintainability, accessibility, and user experience while integrating third-party apps and custom business workflows",
+      "Implemented Google Tag Manager, Google Analytics, and custom tracking pixels to capture customer interactions and event data, improving analytics accuracy and marketing attribution by 40%"
+    ],
+    "featureLinks": [],
+    "technologies": ["Shopify", "Liquid", "JavaScript", "HTML", "CSS", "TypeScript", "Node.js"]
+  },
+  {
+    "id": 207,
+    "title": "Malbon",
+    "subtitle": "Website maintenance & theme refresh",
+    "link": "https://malbon.com/",
+    "tagline": "A modern golf lifestyle brand blending performance, culture, and contemporary design",
+    "scope": "Ongoing website maintenance and redesign",
+    "platform": "Shopify Plus",
+    "highlights": [
+      "Provided ongoing website maintenance to keep the storefront stable, performant, and up to date",
+      "Redesigned key pages to improve brand presentation, usability, and conversion-focused layouts",
+      "Delivered a theme refresh to modernize the shopping experience while preserving core brand identity"
+    ],
+    "featureLinks": [],
+    "technologies": ["Shopify", "Liquid", "JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": 208,
+    "title": "Tailwind Nutrition",
+    "subtitle": "B2B commerce customization & CRO homepage redesign",
+    "link": "https://tailwindnutrition.com/",
+    "tagline": "Endurance fuel, hydration, and recovery nutrition built for athletes and long days out",
+    "scope": "Custom commerce features & CRO-driven redesign",
+    "platform": "Shopify Plus",
+    "highlights": [
+      "Implemented backorder functionality for international B2B customers while enforcing business rules that restricted domestic customers based on regional eligibility",
+      "Built a payment customization function using platform APIs to conditionally display payment methods based on customer segmentation and business rules",
+      "Redesigned the home page as per CRO strategy to improve conversion-focused layouts and user experience"
+    ],
+    "featureLinks": [],
+    "technologies": ["Shopify Plus", "Liquid", "JavaScript", "TypeScript", "Checkout Extensions", "Shopify Functions", "HTML", "CSS"]
+  },
+  {
+    "id": 209,
+    "title": "Escentric Molecules",
+    "subtitle": "Complete storefront redesign",
+    "link": "https://www.escentric.com/",
+    "tagline": "Luxury fragrances and bodycare built on radical, molecule-led perfumery",
+    "scope": "Complete website redesign",
+    "platform": "Shopify Plus",
+    "highlights": [
+      "Delivered a complete storefront redesign for a luxury fragrance and bodycare brand with an editorial, conversion-focused shopping experience",
+      "Built a multi-layer navigation system to support complex product taxonomy across Molecule, Escentric, M+, Body, and collection-driven merchandising",
+      "Implemented regional storefront preferences, gifting workflows, and polished cart and checkout UX for a premium multi-market audience"
+    ],
+    "featureLinks": [],
+    "technologies": ["Shopify Plus", "Liquid", "JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": 210,
+    "title": "Castore",
+    "subtitle": "Website rebuild",
+    "link": "https://castore.com/",
+    "tagline": "Premium sportswear engineered for performance, comfort, and everyday wear",
+    "scope": "Complete website rebuild",
+    "platform": "Shopify Plus",
+    "highlights": [
+      "Delivered a complete website rebuild for a premium sportswear brand with a modern, performance-led storefront experience",
+      "Rebuilt theme architecture to support scalable merchandising across collections, product lines, and seasonal campaigns",
+      "Improved storefront performance, usability, and brand presentation across the full customer journey"
+    ],
+    "featureLinks": [],
+    "technologies": ["Shopify Plus", "Liquid", "JavaScript", "HTML", "CSS"]
+  }
+]

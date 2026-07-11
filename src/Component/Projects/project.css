@@ -2,8 +2,101 @@
   padding-top: 2vmax;
 }
 
-.section_project-grid {
-  padding: 10px 80px;
+.project-tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.project-tabs {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px;
+  background: linear-gradient(180deg, rgb(252, 253, 255) 0%, rgb(245, 249, 255) 100%);
+  border: 1px solid rgb(205, 222, 247);
+  border-radius: 999px;
+  box-shadow:
+    0 1px 2px rgba(6, 46, 111, 0.04),
+    0 4px 16px rgba(6, 46, 111, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.project-tabs__indicator {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: calc(100% - 10px);
+  border-radius: 999px;
+  background: rgb(179, 205, 247);
+  box-shadow:
+    0 1px 4px rgba(6, 46, 111, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition:
+    transform 0.42s cubic-bezier(0.34, 1.25, 0.64, 1),
+    width 0.42s cubic-bezier(0.34, 1.25, 0.64, 1);
+  will-change: transform, width;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.project-tab {
+  position: relative;
+  z-index: 1;
+  border: none;
+  background: transparent;
+  padding: 11px 26px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(6, 46, 111);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.project-tab:hover:not(.active) {
+  color: rgb(6, 46, 111);
+}
+
+.project-tab.active {
+  color: rgb(6, 46, 111);
+}
+
+.project-tab:focus-visible {
+  outline: 2px solid rgb(94, 153, 249);
+  outline-offset: 2px;
+}
+
+.project-panel {
+  animation: projectPanelIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes projectPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-tabs__indicator {
+    transition: none;
+  }
+
+  .project-panel {
+    animation: none;
+  }
+}
+
+.section_project-grid {  padding: 10px 80px;
 }
 
 .project_grid {
@@ -169,8 +262,24 @@
 /* Mobile View Styles */
 
 @media (max-width: 767px) {
-  .section_project-grid {
-    padding: 10px 20px;
+  .project-tabs-wrapper {
+    margin-bottom: 2rem;
+    padding: 0 20px;
+  }
+
+  .project-tabs {
+    width: 100%;
+    max-width: 360px;
+    justify-content: stretch;
+  }
+
+  .project-tab {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 0.84rem;
+  }
+
+  .section_project-grid {    padding: 10px 20px;
   }
 
   .project_grid {
