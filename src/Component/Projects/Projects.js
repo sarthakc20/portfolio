@@ -21,6 +21,8 @@ const imageMap = {
   "todo.png": Todo,
 };
 
+const getProjectCover = (image) => imageMap[image] ?? image;
+
 const Projects = () => {
   const [projectData, setProjectData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -185,13 +187,14 @@ const Projects = () => {
                       )}
 
                       <img
-                        src={imageMap[project.image]}
+                        src={getProjectCover(project.image)}
                         alt={project.alttext}
                         className={`project_card-cover ${
                           imageLoaded[index] ? "loaded" : ""
                         }`}
                         onLoad={() => handleImageLoad(index)}
                       />
+                      <span className="project_card-overlay" aria-hidden="true" />
 
                       {imageLoaded[index] && (
                         <div className="project_card-content">

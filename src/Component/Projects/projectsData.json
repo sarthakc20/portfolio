@@ -55,6 +55,43 @@
     "result": "The markdown system was successfully integrated into the platform, significantly enhancing the user experience by enabling proper code formatting, syntax highlighting, and support for various programming languages. This allows users to easily share well-structured technical content, making posts more readable and professional. Additionally, users can now effortlessly add posts and share valuable insights, including references to AI-related websites, fostering a collaborative and resourceful developer community. This improvement has led to increased user engagement, with more developers actively contributing their knowledge and tools to assist fellow developers."
   },
   {
+    "id": 106,
+    "title": "MyBilzee",
+    "description": "Business & inventory management",
+    "about": "A comprehensive business and inventory management application built to streamline billing, stock control, reporting, and multi-branch operations for growing businesses.",
+    "points": [
+      "Manage billing, stock, and reporting with GST-compliant invoicing and real-time inventory tracking.",
+      "Control access with secure authentication, party management, and serialized item tracking.",
+      "Administer multiple branches with branch-specific purchase and sales insights through visual dashboards."
+    ],
+    "image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783815133/my%20portfolio/ChatGPT_Image_Jul_12_2026_05_41_59_AM_hvhef5.png",
+    "alttext": "MyBilzee cover",
+    "screenshots": [
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783814461/my%20portfolio/gagffgsfg_xllsvx.png",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783814424/my%20portfolio/Captureabc1_dirzcw.png",
+      "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783814424/my%20portfolio/Captureabc_xrd7i2.png"
+    ],
+    "screenshots_grid": [],
+    "screenshots_slide": [],
+    "techstack": ["React", "TypeScript", "React-Redux", "Tailwind CSS", "Node.js", "Express", "PostgreSQL"],
+    "techStackIcons": ["react.png", "Typescript.svg.png", "redux.png", "node.webp", "express.png", "Postgresql_elephant.svg.png"],
+    "techstackIntro": "Built with a modern full-stack architecture for secure, scalable, and data-driven business operations.",
+    "details": [
+      "Developed a comprehensive business and inventory management application to efficiently handle billing, stock, and reporting with GST-compliant invoicing and real-time stock tracking.",
+      "Implemented authentication and access control with secure user permissions, party (customer/vendor) management, item creation and updates, and item serialization for accurate inventory tracking.",
+      "Built multi-branch store management with branch-wise creation and administration, along with branch-specific purchase and sales reports, including visual dashboards and graphs for clear business insights."
+    ],
+    "link": "https://www.mybilzee.com/",
+    "githublink": null,
+    "challenges": [
+      "Designing GST-compliant invoicing workflows while keeping billing flexible across different business scenarios and tax requirements.",
+      "Maintaining accurate real-time stock levels with serialized inventory tracking across multiple branches and user roles.",
+      "Building branch-specific reporting and dashboards that remain performant as transaction volume and store count grow."
+    ],
+    "solution": "Structured the application with role-based access control, normalized inventory models with item serialization, and branch-aware reporting powered by PostgreSQL. Used React-Redux for predictable state management and Tailwind CSS for a responsive, maintainable UI.",
+    "result": "Delivered a production-ready business management platform that centralizes billing, inventory, party management, and multi-branch reporting with clear visual insights for day-to-day operations."
+  },
+  {
     "id": 102,
     "title": "E-Market",
     "description": "Ecommerce platform",
