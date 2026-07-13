@@ -8,6 +8,7 @@
     "scope": "Complete website build redesign",
     "collaboration": "Collaborated with Design team, CRO team, and client stakeholders for clarification and delivery alignment",
     "platform": "Shopify Plus",
+    "image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783977927/my%20portfolio/Logo_1_fwt2bh.svg",
     "highlights": [
       "Worked on core e-commerce features including PDP rebuild with custom color selection variant drawer",
       "Built a 4-layer mega menu bypassing Shopify's max 3-layer mega menu limitation",
@@ -33,6 +34,7 @@
     "tagline": "A characterful loungewear brand",
     "scope": "Complete theme redesign and refresh",
     "platform": "Shopify Plus",
+    "image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783978064/my%20portfolio/b63772e7-6443-4959-b8a7-6cbd9dfe5e6f.png",
     "highlights": [
       "Implemented custom gifting option with gift message from product description page and cart",
       "Enhanced store interactivity and user experience through bespoke Shopify functionality"
@@ -48,6 +50,7 @@
     "tagline": "A personalized jewelry brand crafting hand-stamped discs, bar necklaces, and meaningful custom pieces",
     "scope": "Complete storefront rebuild",
     "platform": "Shopify Plus",
+    "image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783978084/my%20portfolio/logo_a0e07e682d45_02630a6d438c_ebab550fda7d_60fdf137-5308-41bb-a24f-1b332316b224_tzuggi.webp",
     "highlights": [
       "Led the migration of madebymary.com from a headless architecture to a native commerce platform",
       "Delivered a complete storefront rebuild with a fully customized product detail experience",
@@ -64,6 +67,7 @@
     "tagline": "Gym backpacks and tactical rucksacks built for performance and everyday carry",
     "scope": "Scalable theme architecture rebuild",
     "platform": "Shopify Plus",
+    "image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783978279/my%20portfolio/BLACK_SQUARE_LOGO_COPYRIGHT_1_lifslu.png",
     "highlights": [
       "Consolidated 30+ collection templates into a single configurable template through scalable theme architecture",
       "Significantly reduced maintenance effort while improving flexibility for content management",
@@ -80,6 +84,7 @@
     "tagline": "Premium pet food, supplies, and grooming for happier, healthier pets across Canada",
     "scope": "Platform migration",
     "platform": "Shopify Plus",
+    "image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783978323/my%20portfolio/Pet-Planet-Wordmark-Bark-RGB_1_rwkp60.avif",
     "highlights": [
       "Delivered a complete theme rebuild for petplanet.ca with a focus on scalable storefront architecture",
       "Developed a Python automation script to generate URL redirect mappings for around 1 million URLs",
@@ -96,6 +101,7 @@
     "tagline": "Freeze-dried food for camping, backpacking, and emergency preparedness",
     "scope": "Custom commerce features & storefront optimization",
     "platform": "Shopify Plus",
+    "image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783978331/my%20portfolio/Logo_3_ucun9r.svg",
     "highlights": [
       "Designed and developed a volume pricing and bundle offer solution with custom discount logic for accurate cart and checkout pricing",
       "Continuously optimized storefront performance, maintainability, accessibility, and user experience while integrating third-party apps and custom business workflows",
@@ -112,6 +118,7 @@
     "tagline": "A modern golf lifestyle brand blending performance, culture, and contemporary design",
     "scope": "Ongoing website maintenance and redesign",
     "platform": "Shopify Plus",
+    "image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783978486/my%20portfolio/images_sdspga.jpg",
     "highlights": [
       "Provided ongoing website maintenance to keep the storefront stable, performant, and up to date",
       "Redesigned key pages to improve brand presentation, usability, and conversion-focused layouts",
@@ -128,6 +135,7 @@
     "tagline": "Endurance fuel, hydration, and recovery nutrition built for athletes and long days out",
     "scope": "Custom commerce features & CRO-driven redesign",
     "platform": "Shopify Plus",
+    "image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783978489/my%20portfolio/images_bsiwhc.jpg",
     "highlights": [
       "Implemented backorder functionality for international B2B customers while enforcing business rules that restricted domestic customers based on regional eligibility",
       "Built a payment customization function using platform APIs to conditionally display payment methods based on customer segmentation and business rules",
@@ -144,6 +152,7 @@
     "tagline": "Luxury fragrances and bodycare built on radical, molecule-led perfumery",
     "scope": "Complete website redesign",
     "platform": "Shopify Plus",
+    "image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783978551/my%20portfolio/images_tatng7.png",
     "highlights": [
       "Delivered a complete storefront redesign for a luxury fragrance and bodycare brand with an editorial, conversion-focused shopping experience",
       "Built a multi-layer navigation system to support complex product taxonomy across Molecule, Escentric, M+, Body, and collection-driven merchandising",
@@ -160,6 +169,7 @@
     "tagline": "Premium sportswear engineered for performance, comfort, and everyday wear",
     "scope": "Complete website rebuild",
     "platform": "Shopify Plus",
+    "image": "https://res.cloudinary.com/dfl9wcmy4/image/upload/v1783978580/my%20portfolio/images_m2prfs.png",
     "highlights": [
       "Delivered a complete website rebuild for a premium sportswear brand with a modern, performance-led storefront experience",
       "Rebuilt theme architecture to support scalable merchandising across collections, product lines, and seasonal campaigns",

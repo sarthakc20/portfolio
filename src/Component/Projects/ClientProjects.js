@@ -29,12 +29,12 @@ const ListViewIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
   >
-    <rect x="1.5" y="2.5" width="5.5" height="4" rx="1" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M9 4.5H16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    <rect x="1.5" y="8" width="5.5" height="4" rx="1" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M9 10H16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    <rect x="1.5" y="13.5" width="5.5" height="2.5" rx="0.75" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M9 14.75H16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="1.5" y="2" width="5.5" height="3.5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M9 3.75H16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="1.5" y="7.25" width="5.5" height="3.5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M9 9H16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="1.5" y="12.5" width="5.5" height="3.5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M9 14.25H16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
   </svg>
 );
 
@@ -47,7 +47,7 @@ const ClientProjectCard = ({ project, variant = "featured", layout = "grid", car
   >
     <div className="client-project-card__hero">
       <WebsiteThumbnail
-        url={project.link}
+        image={project.image}
         alt={`${project.title} website preview`}
         wrapperClassName="client-project-card__thumbnail"
       />
@@ -119,27 +119,22 @@ const ClientProjectCard = ({ project, variant = "featured", layout = "grid", car
       {project.featureLinks?.length > 0 && (
         <div className="client-project-features">
           <h3 className="client-project-features__title">Key implementations</h3>
-          <div className="client-project-features__grid">
+          <ul className="client-project-features__list">
             {project.featureLinks.map((feature) => (
-              <a
-                href={feature.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="client-project-feature"
-                key={feature.url}
-              >
-                <WebsiteThumbnail
-                  url={feature.url}
-                  alt={`${feature.title} preview`}
-                  wrapperClassName="client-project-feature__thumbnail"
-                />
-                <span className="client-project-feature__overlay" aria-hidden="true">
-                  <MdArrowOutward />
-                </span>
-                <span className="client-project-feature__label">{feature.title}</span>
-              </a>
+              <li key={feature.url}>
+                <a
+                  href={feature.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="client-project-feature-link"
+                >
+                  <FaCircleChevronRight className="exp-icon" />
+                  <span>{feature.title}</span>
+                  <MdArrowOutward className="client-project-feature-link__icon" />
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       )}
     </div>
